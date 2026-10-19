@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Checkout | Mirembe Beddings & Curtains</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="checkout.css">
+</head>
+
+<body>
+
+<header class="checkout-header">
+
+    <a href="index.html" class="brand">
+        <span class="brand-mark">M</span>
+
+        <span class="brand-copy">
+            <strong>MIREMBE</strong>
+            <small>BEDDINGS & CURTAINS</small>
+        </span>
+    </a>
+
+    <div class="secure-checkout">
+        <span>◇</span>
+        SECURE CHECKOUT
+    </div>
+
+    <a href="cart.html" class="back-cart">
+        ← CART
+    </a>
+
+</header>
+
+
+<main class="checkout-page">
+
+    <section class="checkout-heading">
+
+        <span class="eyebrow">COMPLETE YOUR ORDER</span>
+
+        <h1>
+            Almost
+            <em>home.</em>
+        </h1>
+
+        <p>
+            Tell us where to bring your Mirembe pieces.
+        </p>
+
+    </section>
+
+
+    <form id="checkoutForm" class="checkout-layout">
+
+        <!-- ==========================================
+             LEFT
+        =========================================== -->
+
+        <div class="checkout-main">
+
+
+            <!-- CUSTOMER -->
+
+            <section class="checkout-section">
+
+                <div class="section-number">
+                    01
+                </div>
+
+                <div class="section-content">
+
+                    <div class="section-title">
+                        <div>
+                            <span>YOUR DETAILS</span>
+                            <h2>Who are we delivering to?</h2>
+                        </div>
+                    </div>
+
+
+                    <div class="form-grid">
+
+                        <label class="field full">
+                            <span>FULL NAME *</span>
+
+                            <input
+                                type="text"
+                                id="fullName"
+                                placeholder="Your full name"
+                                required
+                            >
+
+                            <small class="error"></small>
+                        </label>
+
+
+                        <label class="field">
+
+                            <span>PHONE NUMBER *</span>
+
+                            <input
+                                type="tel"
+                                id="phone"
+                                placeholder="+256 7XX XXX XXX"
+                                required
+                            >
+
+                            <small class="error"></small>
+
+                        </label>
+
+
+                        <label class="field">
+
+                            <span>WHATSAPP NUMBER</span>
+
+                            <input
+                                type="tel"
+                                id="whatsapp"
+                                placeholder="Same as phone?"
+                            >
+
+                        </label>
+
+
+                        <label class="field full">
+
+                            <span>EMAIL ADDRESS</span>
+
+                            <input
+                                type="email"
+                                id="email"
+                                placeholder="Optional"
+                            >
+
+                            <small class="hint">
+                                We'll only use this for your order confirmation.
+                            </small>
+
+                        </label>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- DELIVERY -->
+
+            <section class="checkout-section">
+
+                <div class="section-number">
+                    02
+                </div>
+
+                <div class="section-content">
+
+                    <div class="section-title">
+
+                        <div>
+                            <span>DELIVERY</span>
+
+                            <h2>
+                                Where should we bring it?
+                            </h2>
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-grid">
+
+                        <label class="field">
+
+                            <span>DISTRICT *</span>
+
+                            <select id="district" required>
+
+                                <option value="">
+                                    Select district
+                                </option>
+
+                                <option>Kampala</option>
+                                <option>Wakiso</option>
+                                <option>Mukono</option>
+                                <option>Entebbe</option>
+                                <option>Jinja</option>
+                                <option>Mbarara</option>
+                                <option>Other</option>
+
+                            </select>
+
+                            <small class="error"></small>
+
+                        </label>
+
+
+                        <label class="field">
+
+                            <span>AREA / TOWN *</span>
+
+                            <input
+                                type="text"
+                                id="area"
+                                placeholder="e.g. Ntinda"
+                                required
+                            >
+
+                            <small class="error"></small>
+
+                        </label>
+
+
+                        <label class="field full">
+
+                            <span>DETAILED LOCATION *</span>
+
+                            <textarea
+                                id="address"
+                                rows="3"
+                                placeholder="House number, building, street, landmark..."
+                                required
+                            ></textarea>
+
+                            <small class="error"></small>
+
+                        </label>
+
+
+                        <label class="field full">
+
+                            <span>DELIVERY NOTES</span>
+
+                            <textarea
+                                id="deliveryNotes"
+                                rows="2"
+                                placeholder="Anything our delivery team should know?"
+                            ></textarea>
+
+                        </label>
+
+                    </div>
+
+
+                    <div class="delivery-notice">
+
+                        <div class="notice-icon">
+                            ◇
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Delivery fee
+                            </strong>
+
+                            <p>
+                                Your delivery fee will be confirmed based on your location before the order is finalized.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- PAYMENT -->
+
+            <section class="checkout-section">
+
+                <div class="section-number">
+                    03
+                </div>
+
+                <div class="section-content">
+
+                    <div class="section-title">
+
+                        <div>
+                            <span>PAYMENT</span>
+
+                            <h2>
+                                How would you like to pay?
+                            </h2>
+                        </div>
+
+                    </div>
+
+
+                    <div class="payment-options">
+
+                        <label class="payment-option">
+
+                            <input
+                                type="radio"
+                                name="payment"
+                                value="mobile-money"
+                                checked
+                            >
+
+                            <div class="payment-card">
+
+                                <div class="payment-icon">
+                                    M
+                                </div>
+
+                                <div>
+                                    <strong>Mobile Money</strong>
+                                    <span>
+                                        MTN or Airtel Money
+                                    </span>
+                                </div>
+
+                                <i></i>
+
+                            </div>
+
+                        </label>
+
+
+                        <label class="payment-option">
+
+                            <input
+                                type="radio"
+                                name="payment"
+                                value="cash"
+                            >
+
+                            <div class="payment-card">
+
+                                <div class="payment-icon">
+                                    UGX
+                                </div>
+
+                                <div>
+                                    <strong>Cash on Delivery</strong>
+                                    <span>
+                                        Pay when your order arrives
+                                    </span>
+                                </div>
+
+                                <i></i>
+
+                            </div>
+
+                        </label>
+
+                    </div>
+
+
+                    <div
+                        class="mobile-money-info"
+                        id="mobileMoneyInfo"
+                    >
+
+                        <span>
+                            MOBILE MONEY
+                        </span>
+
+                        <p>
+                            After submitting your order, Mirembe will contact you with the payment details and confirmation instructions.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- FINAL -->
+
+            <section class="final-note">
+
+                <span>
+                    MIREMBE
+                </span>
+
+                <p>
+                    By placing your order, you confirm that the information provided is correct and that you agree to be contacted regarding your delivery.
+                </p>
+
+            </section>
+
+        </div>
+
+
+        <!-- ==========================================
+             RIGHT SUMMARY
+        =========================================== -->
+
+        <aside class="order-sidebar">
+
+            <div class="sidebar-inner">
+
+                <div class="sidebar-heading">
+
+                    <span>
+                        YOUR ORDER
+                    </span>
+
+                    <strong id="summaryCount">
+                        0 ITEMS
+                    </strong>
+
+                </div>
+
+
+                <div
+                    id="checkoutItems"
+                    class="checkout-items"
+                ></div>
+
+
+                <div class="summary-details">
+
+                    <div>
+                        <span>Subtotal</span>
+
+                        <strong id="subtotal">
+                            UGX 0
+                        </strong>
+                    </div>
+
+
+                    <div>
+                        <span>Delivery</span>
+
+                        <strong class="pending">
+                            To be confirmed
+                        </strong>
+                    </div>
+
+                </div>
+
+
+                <div class="grand-total">
+
+                    <span>
+                        ESTIMATED TOTAL
+                    </span>
+
+                    <strong id="grandTotal">
+                        UGX 0
+                    </strong>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="place-order"
+                >
+
+                    <span>
+                        PLACE ORDER
+                    </span>
+
+                    <strong>
+                        ↗
+                    </strong>
+
+                </button>
+
+
+                <a href="cart.html" class="edit-cart">
+                    ← Edit cart
+                </a>
+
+
+                <div class="sidebar-trust">
+
+                    <div>
+                        <span>◇</span>
+                        <p>
+                            Your order is prepared with care.
+                        </p>
+                    </div>
+
+                    <div>
+                        <span>◇</span>
+                        <p>
+                            We'll contact you to confirm delivery.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </aside>
+
+    </form>
+
+</main>
+
+
+<!-- ==========================================
+     SUCCESS
+=========================================== -->
+
+<div
+    class="success-overlay"
+    id="successOverlay"
+>
+
+    <div class="success-card">
+
+        <button
+            class="success-close"
+            id="successClose"
+        >
+            ×
+        </button>
+
+        <div class="success-symbol">
+            M
+        </div>
+
+        <span class="eyebrow">
+            ORDER RECEIVED
+        </span>
+
+        <h2>
+            Thank you,
+            <em id="customerName">friend.</em>
+        </h2>
+
+        <p>
+            Your Mirembe order has been received.
+            We'll contact you shortly to confirm the
+            order and delivery details.
+        </p>
+
+        <div class="order-number">
+
+            <span>
+                ORDER NUMBER
+            </span>
+
+            <strong id="orderNumber">
+                MRB-0000
+            </strong>
+
+        </div>
+
+        <div class="success-actions">
+
+            <a href="shop.html">
+                CONTINUE SHOPPING
+            </a>
+
+            <button id="closeSuccess">
+                DONE
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script src="checkout.js"></script>
+
+</body>
+</html>

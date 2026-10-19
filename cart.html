@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Your Cart | Mirembe Beddings & Curtains</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="cart.css"
+    >
+</head>
+
+<body>
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header class="site-header">
+
+    <a href="index.html" class="brand">
+
+        <span class="brand-mark">
+            M
+        </span>
+
+        <span class="brand-copy">
+
+            <strong>
+                MIREMBE
+            </strong>
+
+            <small>
+                BEDDINGS & CURTAINS
+            </small>
+
+        </span>
+
+    </a>
+
+
+    <nav class="desktop-nav">
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="shop.html">
+            Shop
+        </a>
+
+        <a href="index.html#collections">
+            Collections
+        </a>
+
+        <a href="index.html#about">
+            Our Story
+        </a>
+
+        <a href="index.html#contact">
+            Contact
+        </a>
+
+    </nav>
+
+
+    <div class="header-actions">
+
+        <a
+            href="shop.html"
+            class="continue-header"
+        >
+            Continue shopping
+        </a>
+
+        <button class="menu-button">
+
+            <span></span>
+            <span></span>
+
+        </button>
+
+    </div>
+
+</header>
+
+
+<!-- =====================================================
+     MOBILE NAV
+===================================================== -->
+
+<div class="mobile-nav">
+
+    <div class="mobile-nav-top">
+
+        <span>
+            MENU
+        </span>
+
+        <button class="close-menu">
+            ×
+        </button>
+
+    </div>
+
+
+    <nav>
+
+        <a href="index.html">
+            <small>01</small>
+            Home
+        </a>
+
+        <a href="shop.html">
+            <small>02</small>
+            Shop
+        </a>
+
+        <a href="index.html#collections">
+            <small>03</small>
+            Collections
+        </a>
+
+        <a href="index.html#about">
+            <small>04</small>
+            Our Story
+        </a>
+
+        <a href="index.html#contact">
+            <small>05</small>
+            Contact
+        </a>
+
+    </nav>
+
+</div>
+
+
+<!-- =====================================================
+     CART PAGE
+===================================================== -->
+
+<main class="cart-page">
+
+
+    <!-- INTRO -->
+
+    <section class="cart-intro">
+
+        <div>
+
+            <span class="eyebrow">
+                YOUR SELECTION
+            </span>
+
+            <h1>
+                Your
+                <em>cart.</em>
+            </h1>
+
+        </div>
+
+
+        <div class="cart-counter">
+
+            <span id="itemCount">
+                0
+            </span>
+
+            <small>
+                items
+            </small>
+
+        </div>
+
+    </section>
+
+
+    <!-- =================================================
+         EMPTY CART
+    ================================================== -->
+
+    <section
+        class="empty-cart"
+        id="emptyCart"
+    >
+
+        <div class="empty-symbol">
+            M
+        </div>
+
+        <span>
+            YOUR CART IS WAITING
+        </span>
+
+        <h2>
+            Nothing here
+            <em>yet.</em>
+        </h2>
+
+        <p>
+            Discover something beautiful
+            for your bedroom or windows.
+        </p>
+
+        <a
+            href="shop.html"
+            class="shop-button"
+        >
+            EXPLORE THE COLLECTION
+            <strong>↗</strong>
+        </a>
+
+    </section>
+
+
+    <!-- =================================================
+         CART CONTENT
+    ================================================== -->
+
+    <section
+        class="cart-content"
+        id="cartContent"
+    >
+
+
+        <!-- PRODUCTS -->
+
+        <div class="cart-products">
+
+            <div class="cart-products-head">
+
+                <span>
+                    PRODUCT
+                </span>
+
+                <span>
+                    QUANTITY
+                </span>
+
+                <span>
+                    TOTAL
+                </span>
+
+            </div>
+
+
+            <div
+                id="cartItems"
+                class="cart-items"
+            ></div>
+
+
+            <div class="cart-footer">
+
+                <a href="shop.html">
+
+                    ← Continue shopping
+
+                </a>
+
+
+                <button
+                    id="clearCart"
+                >
+                    Clear cart
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================================
+             SUMMARY
+        ================================================== -->
+
+        <aside class="cart-summary">
+
+            <div class="summary-top">
+
+                <span>
+                    ORDER SUMMARY
+                </span>
+
+                <span id="summaryItems">
+                    0 ITEMS
+                </span>
+
+            </div>
+
+
+            <div class="summary-lines">
+
+                <div>
+
+                    <span>
+                        Subtotal
+                    </span>
+
+                    <strong id="subtotal">
+                        UGX 0
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        Delivery
+                    </span>
+
+                    <strong>
+                        Calculated at checkout
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="summary-total">
+
+                <span>
+                    Estimated total
+                </span>
+
+                <strong id="total">
+                    UGX 0
+                </strong>
+
+            </div>
+
+
+            <button
+                class="checkout-button"
+                id="checkoutButton"
+            >
+
+                <span>
+                    PROCEED TO CHECKOUT
+                </span>
+
+                <strong>
+                    ↗
+                </strong>
+
+            </button>
+
+
+            <div class="secure-note">
+
+                <span>
+                    ◇
+                </span>
+
+                <p>
+                    Your order details are
+                    securely prepared for checkout.
+                </p>
+
+            </div>
+
+        </aside>
+
+    </section>
+
+
+    <!-- =================================================
+         TRUST
+    ================================================== -->
+
+    <section class="cart-trust">
+
+        <div>
+
+            <span>
+                01
+            </span>
+
+            <strong>
+                Doorstep delivery
+            </strong>
+
+            <p>
+                We bring your order to you.
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <span>
+                02
+            </span>
+
+            <strong>
+                Carefully packed
+            </strong>
+
+            <p>
+                Your pieces are prepared with care.
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <span>
+                03
+            </span>
+
+            <strong>
+                Personal service
+            </strong>
+
+            <p>
+                Need help? We're here.
+            </p>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<!-- =====================================================
+     REMOVE MODAL
+===================================================== -->
+
+<div
+    class="confirm-modal"
+    id="confirmModal"
+>
+
+    <div class="confirm-card">
+
+        <button
+            class="modal-close"
+            id="modalClose"
+        >
+            ×
+        </button>
+
+        <span>
+            REMOVE ITEM
+        </span>
+
+        <h2>
+            Remove this
+            <em>piece?</em>
+        </h2>
+
+        <p>
+            You can always add it back
+            to your cart later.
+        </p>
+
+        <div class="modal-actions">
+
+            <button
+                id="cancelRemove"
+            >
+                KEEP IT
+            </button>
+
+            <button
+                id="confirmRemove"
+            >
+                REMOVE
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script src="cart.js"></script>
+
+</body>
+</html>

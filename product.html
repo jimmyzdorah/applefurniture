@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Product | Mirembe Beddings & Curtains</title>
+
+    <meta
+        name="description"
+        content="Discover premium bedding and curtains from Mirembe."
+    >
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="product.css">
+</head>
+
+<body>
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header class="site-header">
+
+    <a href="index.html" class="brand">
+
+        <span class="brand-mark">M</span>
+
+        <span class="brand-copy">
+            <strong>MIREMBE</strong>
+            <small>BEDDINGS & CURTAINS</small>
+        </span>
+
+    </a>
+
+
+    <nav class="desktop-nav">
+
+        <a href="index.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="index.html#collections">Collections</a>
+        <a href="index.html#about">Our Story</a>
+        <a href="index.html#contact">Contact</a>
+
+    </nav>
+
+
+    <div class="header-actions">
+
+        <button
+            class="search-button"
+            aria-label="Search"
+        >
+
+            <svg viewBox="0 0 24 24">
+                <circle cx="11" cy="11" r="7"></circle>
+                <path d="M20 20L16.2 16.2"></path>
+            </svg>
+
+        </button>
+
+
+        <a
+            href="cart.html"
+            class="cart-button"
+        >
+
+            <svg viewBox="0 0 24 24">
+                <path d="M3 4h2l2.4 11.2a2 2 0 0 0 2 1.6h7.8a2 2 0 0 0 1.9-1.4L21 8H6"></path>
+                <circle cx="10" cy="20" r="1"></circle>
+                <circle cx="18" cy="20" r="1"></circle>
+            </svg>
+
+            <span class="cart-count">0</span>
+
+        </a>
+
+
+        <button class="menu-button">
+
+            <span></span>
+            <span></span>
+
+        </button>
+
+    </div>
+
+</header>
+
+
+<!-- =====================================================
+     SEARCH
+===================================================== -->
+
+<div class="search-overlay">
+
+    <button class="close-search">×</button>
+
+    <div class="search-container">
+
+        <span>SEARCH MIREMBE</span>
+
+        <div class="search-input">
+
+            <input
+                id="searchInput"
+                type="text"
+                placeholder="Search bedding, curtains..."
+            >
+
+            <svg viewBox="0 0 24 24">
+                <circle cx="11" cy="11" r="7"></circle>
+                <path d="M20 20L16.2 16.2"></path>
+            </svg>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =====================================================
+     MOBILE NAV
+===================================================== -->
+
+<div class="mobile-nav">
+
+    <div class="mobile-nav-top">
+
+        <span>MENU</span>
+
+        <button class="close-menu">
+            ×
+        </button>
+
+    </div>
+
+
+    <nav>
+
+        <a href="index.html">
+            <small>01</small>
+            Home
+        </a>
+
+        <a href="shop.html">
+            <small>02</small>
+            Shop
+        </a>
+
+        <a href="index.html#collections">
+            <small>03</small>
+            Collections
+        </a>
+
+        <a href="index.html#about">
+            <small>04</small>
+            Our Story
+        </a>
+
+        <a href="index.html#contact">
+            <small>05</small>
+            Contact
+        </a>
+
+    </nav>
+
+</div>
+
+
+<!-- =====================================================
+     PRODUCT
+===================================================== -->
+
+<main>
+
+    <div class="product-page">
+
+
+        <!-- BREADCRUMB -->
+
+        <div class="breadcrumb">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <span>/</span>
+
+            <a href="shop.html">
+                Shop
+            </a>
+
+            <span>/</span>
+
+            <span id="breadcrumbName">
+                Product
+            </span>
+
+        </div>
+
+
+        <!-- PRODUCT LAYOUT -->
+
+        <section class="product-layout">
+
+
+            <!-- =================================================
+                 IMAGE SIDE
+            ================================================== -->
+
+            <div class="gallery">
+
+
+                <div class="gallery-main">
+
+                    <div
+                        class="product-badge"
+                        id="productBadge"
+                    >
+                        NEW
+                    </div>
+
+
+                    <button
+                        class="gallery-arrow gallery-prev"
+                        aria-label="Previous image"
+                    >
+                        ←
+                    </button>
+
+
+                    <img
+                        id="mainProductImage"
+                        src=""
+                        alt=""
+                    >
+
+
+                    <button
+                        class="gallery-arrow gallery-next"
+                        aria-label="Next image"
+                    >
+                        →
+                    </button>
+
+
+                    <button
+                        class="image-expand"
+                        aria-label="Expand image"
+                    >
+                        ⤢
+                    </button>
+
+                </div>
+
+
+                <div
+                    class="gallery-thumbnails"
+                    id="galleryThumbnails"
+                ></div>
+
+            </div>
+
+
+            <!-- =================================================
+                 PRODUCT DETAILS
+            ================================================== -->
+
+            <div class="product-details">
+
+
+                <div class="product-category" id="productCategory">
+                    BEDDINGS
+                </div>
+
+
+                <h1 id="productName">
+                    Signature Comfort Set
+                </h1>
+
+
+                <div class="rating">
+
+                    <div class="stars">
+                        ★★★★★
+                    </div>
+
+                    <span>
+                        4.9 · 12 reviews
+                    </span>
+
+                </div>
+
+
+                <div class="price" id="productPrice">
+                    UGX 180,000
+                </div>
+
+
+                <p
+                    class="short-description"
+                    id="productDescription"
+                >
+                    Beautifully made for everyday comfort,
+                    with a soft finish that makes your
+                    bedroom feel instantly more inviting.
+                </p>
+
+
+                <!-- STOCK -->
+
+                <div class="stock-status">
+
+                    <span class="stock-dot"></span>
+
+                    <span id="stockText">
+                        In stock
+                    </span>
+
+                </div>
+
+
+                <!-- COLOURS -->
+
+                <div
+                    class="option-section"
+                    id="colorSection"
+                >
+
+                    <div class="option-heading">
+
+                        <span>
+                            Colour
+                        </span>
+
+                        <strong id="selectedColor">
+                            Cream
+                        </strong>
+
+                    </div>
+
+
+                    <div
+                        class="color-options"
+                        id="colorOptions"
+                    ></div>
+
+                </div>
+
+
+                <!-- SIZE -->
+
+                <div
+                    class="option-section"
+                    id="sizeSection"
+                >
+
+                    <div class="option-heading">
+
+                        <span>
+                            Size
+                        </span>
+
+                        <strong id="selectedSize">
+                            Select size
+                        </strong>
+
+                    </div>
+
+
+                    <div
+                        class="size-options"
+                        id="sizeOptions"
+                    ></div>
+
+                </div>
+
+
+                <!-- QUANTITY -->
+
+                <div class="quantity-section">
+
+                    <span>
+                        Quantity
+                    </span>
+
+
+                    <div class="quantity-control">
+
+                        <button id="decreaseQuantity">
+                            −
+                        </button>
+
+                        <span id="quantity">
+                            1
+                        </span>
+
+                        <button id="increaseQuantity">
+                            +
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ACTIONS -->
+
+                <div class="purchase-actions">
+
+                    <button
+                        class="add-cart"
+                        id="addCart"
+                    >
+                        <span>
+                            ADD TO CART
+                        </span>
+
+                        <strong>
+                            ↗
+                        </strong>
+
+                    </button>
+
+
+                    <button
+                        class="buy-now"
+                        id="buyNow"
+                    >
+                        BUY NOW
+                    </button>
+
+
+                    <button
+                        class="wishlist"
+                        id="wishlist"
+                    >
+                        ♡
+                    </button>
+
+                </div>
+
+
+                <!-- INFO ACCORDION -->
+
+                <div class="product-information">
+
+
+                    <div class="info-item">
+
+                        <button class="info-trigger">
+
+                            <span>
+                                Delivery
+                            </span>
+
+                            <span>+</span>
+
+                        </button>
+
+                        <div class="info-content">
+
+                            <p>
+                                We deliver across Kampala
+                                and selected areas around
+                                Uganda. Delivery charges are
+                                calculated according to your
+                                location at checkout.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="info-item">
+
+                        <button class="info-trigger">
+
+                            <span>
+                                Product details
+                            </span>
+
+                            <span>+</span>
+
+                        </button>
+
+                        <div class="info-content">
+
+                            <p>
+                                Carefully selected fabrics,
+                                refined finishes and
+                                practical designs made for
+                                beautiful everyday spaces.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="info-item">
+
+                        <button class="info-trigger">
+
+                            <span>
+                                Care
+                            </span>
+
+                            <span>+</span>
+
+                        </button>
+
+                        <div class="info-content">
+
+                            <p>
+                                Follow the care instructions
+                                supplied with your product.
+                                Gentle washing and proper
+                                storage will help preserve
+                                the fabric and colour.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </div>
+
+
+    <!-- =====================================================
+         RELATED PRODUCTS
+    ====================================================== -->
+
+    <section class="related-section">
+
+        <div class="related-heading">
+
+            <div>
+
+                <span>
+                    YOU MAY ALSO LIKE
+                </span>
+
+                <h2>
+                    Complete the
+                    <em>room.</em>
+                </h2>
+
+            </div>
+
+
+            <a href="shop.html">
+                View all products
+                <strong>↗</strong>
+            </a>
+
+        </div>
+
+
+        <div
+            class="related-grid"
+            id="relatedProducts"
+        ></div>
+
+    </section>
+
+
+    <!-- =====================================================
+         DELIVERY STRIP
+    ====================================================== -->
+
+    <section class="service-strip">
+
+        <div class="service-item">
+
+            <span>01</span>
+
+            <div>
+
+                <strong>
+                    Local delivery
+                </strong>
+
+                <p>
+                    Convenient delivery to your door.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="service-item">
+
+            <span>02</span>
+
+            <div>
+
+                <strong>
+                    Carefully selected
+                </strong>
+
+                <p>
+                    Products chosen with quality in mind.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="service-item">
+
+            <span>03</span>
+
+            <div>
+
+                <strong>
+                    Easy ordering
+                </strong>
+
+                <p>
+                    Choose your favourite pieces online.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="service-item">
+
+            <span>04</span>
+
+            <div>
+
+                <strong>
+                    Personal service
+                </strong>
+
+                <p>
+                    We're here whenever you need us.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<!-- =====================================================
+     IMAGE LIGHTBOX
+===================================================== -->
+
+<div class="lightbox">
+
+    <button class="close-lightbox">
+        ×
+    </button>
+
+    <img
+        id="lightboxImage"
+        src=""
+        alt=""
+    >
+
+</div>
+
+
+<!-- =====================================================
+     TOAST
+===================================================== -->
+
+<div class="toast">
+
+    <span>✓</span>
+
+    <p>
+        Added to your cart
+    </p>
+
+</div>
+
+
+<script src="product.js"></script>
+
+</body>
+</html>

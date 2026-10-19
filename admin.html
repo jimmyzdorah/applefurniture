@@ -1,0 +1,1188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mirembe Admin | Beddings & Curtains</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="admin.css">
+</head>
+
+<body>
+
+<div class="admin-shell">
+
+
+    <!-- =====================================================
+         SIDEBAR
+    ====================================================== -->
+
+    <aside class="sidebar" id="sidebar">
+
+        <div class="sidebar-top">
+
+            <a href="../index.html" class="admin-brand">
+
+                <span class="brand-mark">
+                    M
+                </span>
+
+                <div>
+                    <strong>MIREMBE</strong>
+                    <small>ADMIN</small>
+                </div>
+
+            </a>
+
+
+            <button
+                class="mobile-close"
+                id="mobileClose"
+            >
+                ×
+            </button>
+
+
+            <div class="store-status">
+
+                <span class="status-dot"></span>
+
+                <div>
+                    <strong>Store online</strong>
+                    <small>Customers can order</small>
+                </div>
+
+            </div>
+
+
+            <nav class="admin-nav">
+
+                <p class="nav-label">
+                    MANAGEMENT
+                </p>
+
+
+                <button
+                    class="nav-item active"
+                    data-section="overview"
+                >
+                    <span>01</span>
+                    Overview
+                </button>
+
+
+                <button
+                    class="nav-item"
+                    data-section="orders"
+                >
+                    <span>02</span>
+                    Orders
+                    <b id="sidebarOrderCount">0</b>
+                </button>
+
+
+                <button
+                    class="nav-item"
+                    data-section="products"
+                >
+                    <span>03</span>
+                    Products
+                </button>
+
+
+                <button
+                    class="nav-item"
+                    data-section="inventory"
+                >
+                    <span>04</span>
+                    Inventory
+                </button>
+
+
+                <p class="nav-label second">
+                    STORE
+                </p>
+
+
+                <a
+                    href="../shop.html"
+                    class="nav-link"
+                >
+                    <span>↗</span>
+                    View storefront
+                </a>
+
+
+                <a
+                    href="../index.html"
+                    class="nav-link"
+                >
+                    <span>↗</span>
+                    Main website
+                </a>
+
+            </nav>
+
+        </div>
+
+
+        <div class="sidebar-bottom">
+
+            <div class="admin-profile">
+
+                <div class="profile-avatar">
+                    M
+                </div>
+
+                <div>
+                    <strong>Mirembe</strong>
+                    <small>Administrator</small>
+                </div>
+
+                <button
+                    id="logoutButton"
+                    title="Log out"
+                >
+                    ↗
+                </button>
+
+            </div>
+
+        </div>
+
+    </aside>
+
+
+    <!-- =====================================================
+         MAIN
+    ====================================================== -->
+
+    <main class="admin-main">
+
+
+        <!-- TOPBAR -->
+
+        <header class="topbar">
+
+            <button
+                class="menu-toggle"
+                id="menuToggle"
+            >
+                <span></span>
+                <span></span>
+            </button>
+
+
+            <div class="breadcrumb">
+
+                <span>MIREMBE</span>
+
+                <b>/</b>
+
+                <strong id="pageTitle">
+                    Overview
+                </strong>
+
+            </div>
+
+
+            <div class="top-actions">
+
+                <button
+                    class="icon-button"
+                    id="notificationButton"
+                >
+                    ◇
+
+                    <i id="notificationDot"></i>
+                </button>
+
+
+                <a
+                    href="../shop.html"
+                    class="view-store"
+                >
+                    View shop ↗
+                </a>
+
+            </div>
+
+        </header>
+
+
+        <!-- =================================================
+             OVERVIEW
+        ================================================== -->
+
+        <section
+            class="admin-section active"
+            id="overview"
+        >
+
+            <div class="page-intro">
+
+                <div>
+
+                    <span class="eyebrow">
+                        WEDNESDAY · AUGUST 26
+                    </span>
+
+                    <h1>
+                        Good morning,
+                        <em>Mirembe.</em>
+                    </h1>
+
+                    <p>
+                        Here's what's happening in your store today.
+                    </p>
+
+                </div>
+
+
+                <button
+                    class="primary-button"
+                    id="addProductTop"
+                >
+                    <span>+</span>
+                    Add product
+                </button>
+
+            </div>
+
+
+            <!-- STATS -->
+
+            <div class="stats-grid">
+
+                <article class="stat-card large">
+
+                    <div class="stat-top">
+
+                        <span>
+                            TODAY'S ORDERS
+                        </span>
+
+                        <i>
+                            01
+                        </i>
+
+                    </div>
+
+                    <strong id="todayOrders">
+                        0
+                    </strong>
+
+                    <p>
+                        Orders received today
+                    </p>
+
+                </article>
+
+
+                <article class="stat-card">
+
+                    <div class="stat-top">
+
+                        <span>
+                            PENDING
+                        </span>
+
+                        <i>
+                            02
+                        </i>
+
+                    </div>
+
+                    <strong id="pendingOrders">
+                        0
+                    </strong>
+
+                    <p>
+                        Need your attention
+                    </p>
+
+                </article>
+
+
+                <article class="stat-card">
+
+                    <div class="stat-top">
+
+                        <span>
+                            PRODUCTS
+                        </span>
+
+                        <i>
+                            03
+                        </i>
+
+                    </div>
+
+                    <strong id="totalProducts">
+                        0
+                    </strong>
+
+                    <p>
+                        Currently in catalogue
+                    </p>
+
+                </article>
+
+
+                <article class="stat-card">
+
+                    <div class="stat-top">
+
+                        <span>
+                            LOW STOCK
+                        </span>
+
+                        <i>
+                            04
+                        </i>
+
+                    </div>
+
+                    <strong id="lowStock">
+                        0
+                    </strong>
+
+                    <p>
+                        Products need restocking
+                    </p>
+
+                </article>
+
+            </div>
+
+
+            <!-- DASHBOARD GRID -->
+
+            <div class="dashboard-grid">
+
+
+                <!-- RECENT ORDERS -->
+
+                <article class="dashboard-card orders-preview">
+
+                    <div class="card-heading">
+
+                        <div>
+
+                            <span>
+                                RECENT ACTIVITY
+                            </span>
+
+                            <h2>
+                                Latest orders
+                            </h2>
+
+                        </div>
+
+                        <button
+                            class="text-button"
+                            data-go="orders"
+                        >
+                            View all →
+                        </button>
+
+                    </div>
+
+
+                    <div
+                        id="recentOrders"
+                        class="recent-orders"
+                    ></div>
+
+                </article>
+
+
+                <!-- INVENTORY -->
+
+                <article class="dashboard-card inventory-preview">
+
+                    <div class="card-heading">
+
+                        <div>
+
+                            <span>
+                                INVENTORY
+                            </span>
+
+                            <h2>
+                                Stock watch
+                            </h2>
+
+                        </div>
+
+                        <button
+                            class="text-button"
+                            data-go="inventory"
+                        >
+                            Manage →
+                        </button>
+
+                    </div>
+
+
+                    <div
+                        id="stockWatch"
+                        class="stock-watch"
+                    ></div>
+
+                </article>
+
+            </div>
+
+
+            <!-- QUICK ACTIONS -->
+
+            <div class="quick-section">
+
+                <span class="eyebrow">
+                    QUICK ACTIONS
+                </span>
+
+                <div class="quick-actions">
+
+                    <button
+                        class="quick-action"
+                        id="quickProduct"
+                    >
+                        <span>+</span>
+                        <strong>Add product</strong>
+                        <small>Create a new item</small>
+                    </button>
+
+
+                    <button
+                        class="quick-action"
+                        data-go="inventory"
+                    >
+                        <span>◇</span>
+                        <strong>Check inventory</strong>
+                        <small>Review stock levels</small>
+                    </button>
+
+
+                    <button
+                        class="quick-action"
+                        data-go="orders"
+                    >
+                        <span>→</span>
+                        <strong>Process orders</strong>
+                        <small>Prepare customer orders</small>
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             ORDERS
+        ================================================== -->
+
+        <section
+            class="admin-section"
+            id="orders"
+        >
+
+            <div class="page-intro compact">
+
+                <div>
+
+                    <span class="eyebrow">
+                        CUSTOMER ORDERS
+                    </span>
+
+                    <h1>
+                        Orders.
+                    </h1>
+
+                    <p>
+                        Keep every Mirembe order moving.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="toolbar">
+
+                <div class="search-box">
+
+                    <span>⌕</span>
+
+                    <input
+                        type="search"
+                        id="orderSearch"
+                        placeholder="Search orders..."
+                    >
+
+                </div>
+
+
+                <div class="filter-buttons">
+
+                    <button
+                        class="filter active"
+                        data-order-filter="all"
+                    >
+                        All
+                    </button>
+
+                    <button
+                        class="filter"
+                        data-order-filter="new"
+                    >
+                        New
+                    </button>
+
+                    <button
+                        class="filter"
+                        data-order-filter="preparing"
+                    >
+                        Preparing
+                    </button>
+
+                    <button
+                        class="filter"
+                        data-order-filter="out-for-delivery"
+                    >
+                        Delivery
+                    </button>
+
+                    <button
+                        class="filter"
+                        data-order-filter="delivered"
+                    >
+                        Delivered
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="orders-table-wrap">
+
+                <table class="orders-table">
+
+                    <thead>
+
+                        <tr>
+
+                            <th>ORDER</th>
+                            <th>CUSTOMER</th>
+                            <th>ITEMS</th>
+                            <th>TOTAL</th>
+                            <th>STATUS</th>
+                            <th></th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="ordersTableBody"></tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             PRODUCTS
+        ================================================== -->
+
+        <section
+            class="admin-section"
+            id="products"
+        >
+
+            <div class="page-intro compact">
+
+                <div>
+
+                    <span class="eyebrow">
+                        CATALOGUE
+                    </span>
+
+                    <h1>
+                        Products.
+                    </h1>
+
+                    <p>
+                        Shape what customers see in the Mirembe store.
+                    </p>
+
+                </div>
+
+
+                <button
+                    class="primary-button"
+                    id="addProductButton"
+                >
+                    <span>+</span>
+                    Add product
+                </button>
+
+            </div>
+
+
+            <div class="product-toolbar">
+
+                <div class="search-box">
+
+                    <span>⌕</span>
+
+                    <input
+                        type="search"
+                        id="productSearch"
+                        placeholder="Search products..."
+                    >
+
+                </div>
+
+
+                <select id="categoryFilter">
+
+                    <option value="all">
+                        All categories
+                    </option>
+
+                    <option value="beddings">
+                        Beddings
+                    </option>
+
+                    <option value="curtains">
+                        Curtains
+                    </option>
+
+                    <option value="duvets">
+                        Duvets
+                    </option>
+
+                    <option value="pillows">
+                        Pillows
+                    </option>
+
+                    <option value="accessories">
+                        Accessories
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div
+                id="productsGrid"
+                class="products-grid"
+            ></div>
+
+        </section>
+
+
+        <!-- =================================================
+             INVENTORY
+        ================================================== -->
+
+        <section
+            class="admin-section"
+            id="inventory"
+        >
+
+            <div class="page-intro compact">
+
+                <div>
+
+                    <span class="eyebrow">
+                        STOCK CONTROL
+                    </span>
+
+                    <h1>
+                        Inventory.
+                    </h1>
+
+                    <p>
+                        Know what's available before your customers ask.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="inventory-summary">
+
+                <div>
+
+                    <span>IN STOCK</span>
+                    <strong id="inventoryInStock">0</strong>
+
+                </div>
+
+                <div>
+
+                    <span>LOW STOCK</span>
+                    <strong id="inventoryLow">0</strong>
+
+                </div>
+
+                <div>
+
+                    <span>OUT OF STOCK</span>
+                    <strong id="inventoryOut">0</strong>
+
+                </div>
+
+            </div>
+
+
+            <div
+                id="inventoryList"
+                class="inventory-list"
+            ></div>
+
+        </section>
+
+
+    </main>
+
+</div>
+
+
+<!-- =========================================================
+     PRODUCT MODAL
+========================================================= -->
+
+<div
+    class="modal-overlay"
+    id="productModal"
+>
+
+    <div class="modal product-modal">
+
+        <button
+            class="modal-close"
+            data-close-modal
+        >
+            ×
+        </button>
+
+
+        <div class="modal-heading">
+
+            <span class="eyebrow">
+                CATALOGUE
+            </span>
+
+            <h2 id="productModalTitle">
+                Add product.
+            </h2>
+
+            <p>
+                Give your product everything it needs to sell beautifully.
+            </p>
+
+        </div>
+
+
+        <form id="productForm">
+
+            <input
+                type="hidden"
+                id="editProductId"
+            >
+
+
+            <div class="product-form-layout">
+
+
+                <div class="image-upload">
+
+                    <div
+                        class="image-preview"
+                        id="imagePreview"
+                    >
+
+                        <span>
+                            +
+                        </span>
+
+                        <small>
+                            PRODUCT IMAGE
+                        </small>
+
+                    </div>
+
+                    <input
+                        type="file"
+                        id="productImage"
+                        accept="image/*"
+                    >
+
+                    <label for="productImage">
+                        Upload image
+                    </label>
+
+                </div>
+
+
+                <div class="form-fields">
+
+                    <label>
+
+                        <span>PRODUCT NAME *</span>
+
+                        <input
+                            type="text"
+                            id="productName"
+                            placeholder="e.g. Royal Satin Bedding"
+                            required
+                        >
+
+                    </label>
+
+
+                    <div class="two-fields">
+
+                        <label>
+
+                            <span>CATEGORY *</span>
+
+                            <select
+                                id="productCategory"
+                                required
+                            >
+
+                                <option value="">
+                                    Select category
+                                </option>
+
+                                <option value="beddings">
+                                    Beddings
+                                </option>
+
+                                <option value="curtains">
+                                    Curtains
+                                </option>
+
+                                <option value="duvets">
+                                    Duvets
+                                </option>
+
+                                <option value="pillows">
+                                    Pillows
+                                </option>
+
+                                <option value="accessories">
+                                    Accessories
+                                </option>
+
+                            </select>
+
+                        </label>
+
+
+                        <label>
+
+                            <span>PRICE (UGX) *</span>
+
+                            <input
+                                type="number"
+                                id="productPrice"
+                                placeholder="150000"
+                                min="0"
+                                required
+                            >
+
+                        </label>
+
+                    </div>
+
+
+                    <div class="two-fields">
+
+                        <label>
+
+                            <span>STOCK *</span>
+
+                            <input
+                                type="number"
+                                id="productStock"
+                                value="1"
+                                min="0"
+                                required
+                            >
+
+                        </label>
+
+
+                        <label>
+
+                            <span>SIZE</span>
+
+                            <input
+                                type="text"
+                                id="productSize"
+                                placeholder="e.g. 6×6"
+                            >
+
+                        </label>
+
+                    </div>
+
+
+                    <label>
+
+                        <span>DESCRIPTION</span>
+
+                        <textarea
+                            id="productDescription"
+                            rows="3"
+                            placeholder="Describe this product..."
+                        ></textarea>
+
+                    </label>
+
+
+                    <div class="colour-manager">
+
+                        <div class="field-heading">
+
+                            <span>
+                                AVAILABLE COLOURS
+                            </span>
+
+                            <small>
+                                Select all that apply
+                            </small>
+
+                        </div>
+
+
+                        <div
+                            class="colour-options"
+                            id="colourOptions"
+                        >
+
+                            <label class="colour-choice">
+
+                                <input
+                                    type="checkbox"
+                                    value="white"
+                                >
+
+                                <i class="colour-dot white"></i>
+
+                                White
+
+                            </label>
+
+
+                            <label class="colour-choice">
+
+                                <input
+                                    type="checkbox"
+                                    value="cream"
+                                >
+
+                                <i class="colour-dot cream"></i>
+
+                                Cream
+
+                            </label>
+
+
+                            <label class="colour-choice">
+
+                                <input
+                                    type="checkbox"
+                                    value="beige"
+                                >
+
+                                <i class="colour-dot beige"></i>
+
+                                Beige
+
+                            </label>
+
+
+                            <label class="colour-choice">
+
+                                <input
+                                    type="checkbox"
+                                    value="black"
+                                >
+
+                                <i class="colour-dot black"></i>
+
+                                Black
+
+                            </label>
+
+
+                            <label class="colour-choice">
+
+                                <input
+                                    type="checkbox"
+                                    value="brown"
+                                >
+
+                                <i class="colour-dot brown"></i>
+
+                                Brown
+
+                            </label>
+
+
+                            <label class="colour-choice">
+
+                                <input
+                                    type="checkbox"
+                                    value="pink"
+                                >
+
+                                <i class="colour-dot pink"></i>
+
+                                Pink
+
+                            </label>
+
+
+                            <label class="colour-choice">
+
+                                <input
+                                    type="checkbox"
+                                    value="grey"
+                                >
+
+                                <i class="colour-dot grey"></i>
+
+                                Grey
+
+                            </label>
+
+
+                            <label class="colour-choice">
+
+                                <input
+                                    type="checkbox"
+                                    value="blue"
+                                >
+
+                                <i class="colour-dot blue"></i>
+
+                                Blue
+
+                            </label>
+
+                        </div>
+
+                    </div>
+
+
+                    <label class="availability-toggle">
+
+                        <div>
+
+                            <strong>
+                                Available for purchase
+                            </strong>
+
+                            <small>
+                                Customers can currently order this product.
+                            </small>
+
+                        </div>
+
+                        <input
+                            type="checkbox"
+                            id="productAvailable"
+                            checked
+                        >
+
+                        <span></span>
+
+                    </label>
+
+                </div>
+
+            </div>
+
+
+            <div class="modal-actions">
+
+                <button
+                    type="button"
+                    class="secondary-button"
+                    data-close-modal
+                >
+                    Cancel
+                </button>
+
+                <button
+                    type="submit"
+                    class="primary-button"
+                >
+                    Save product
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
+
+<!-- =========================================================
+     ORDER MODAL
+========================================================= -->
+
+<div
+    class="modal-overlay"
+    id="orderModal"
+>
+
+    <div class="modal order-modal">
+
+        <button
+            class="modal-close"
+            data-close-modal
+        >
+            ×
+        </button>
+
+
+        <div id="orderDetails"></div>
+
+    </div>
+
+</div>
+
+
+<div
+    class="toast"
+    id="toast"
+></div>
+
+
+<script src="admin.js"></script>
+
+</body>
+</html>

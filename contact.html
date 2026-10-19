@@ -1,0 +1,1003 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact Us | Apple Furniture Uganda</title>
+
+    <meta name="description"
+          content="Contact Apple Furniture Uganda for sofas, beds, dining sets, office furniture, product enquiries, orders and delivery assistance.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet" href="contact.css">
+
+    <style>
+        /* APPLE FURNITURE PAGE REFINEMENTS */
+
+        em {
+            font-style: normal !important;
+        }
+
+        .hero-image img,
+        .visit-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .contact-card .contact-card-top h3 {
+            font-style: normal;
+        }
+
+        .contact-form-section {
+            padding: 110px 6%;
+            background: #f7f3ed;
+        }
+
+        .contact-form-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 0.9fr 1.1fr;
+            gap: 90px;
+            align-items: start;
+        }
+
+        .form-intro .section-label {
+            display: block;
+            margin-bottom: 24px;
+            color: #8d7155;
+            font-size: 12px;
+            letter-spacing: 2px;
+        }
+
+        .form-intro h2 {
+            font-family: "Playfair Display", serif;
+            font-weight: 400;
+            font-size: clamp(38px, 4.5vw, 68px);
+            line-height: 1.1;
+            color: #2d2925;
+            margin: 0 0 24px;
+        }
+
+        .form-intro p {
+            color: #77716b;
+            font-size: 15px;
+            line-height: 1.9;
+            max-width: 410px;
+        }
+
+        .contact-form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+        }
+
+        .form-field {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .form-field.full {
+            grid-column: 1 / -1;
+        }
+
+        .form-field label {
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            color: #675c51;
+            text-transform: uppercase;
+        }
+
+        .form-field input,
+        .form-field select,
+        .form-field textarea {
+            width: 100%;
+            box-sizing: border-box;
+            background: transparent;
+            border: 0;
+            border-bottom: 1px solid #cfc6b9;
+            padding: 14px 0;
+            font-family: "DM Sans", sans-serif;
+            font-size: 15px;
+            color: #302b26;
+            outline: none;
+            border-radius: 0;
+            transition: border-color 0.25s;
+        }
+
+        .form-field input:focus,
+        .form-field select:focus,
+        .form-field textarea:focus {
+            border-color: #8d7155;
+        }
+
+        .form-field textarea {
+            min-height: 110px;
+            resize: vertical;
+        }
+
+        .form-submit {
+            grid-column: 1 / -1;
+            display: inline-flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+            padding: 19px 26px;
+            background: #302b26;
+            color: #fff;
+            border: 1px solid #302b26;
+            font-family: "DM Sans", sans-serif;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        .form-submit:hover {
+            background: transparent;
+            color: #302b26;
+        }
+
+        .form-submit strong {
+            font-size: 20px;
+            font-weight: 400;
+        }
+
+        .form-note {
+            grid-column: 1 / -1;
+            font-size: 12px;
+            color: #817970;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        .contact-card .phone-list a {
+            text-decoration: none;
+        }
+
+        @media (max-width: 850px) {
+            .contact-form-inner {
+                grid-template-columns: 1fr;
+                gap: 45px;
+            }
+
+            .contact-form-section {
+                padding: 75px 6%;
+            }
+        }
+
+        @media (max-width: 550px) {
+            .contact-form {
+                grid-template-columns: 1fr;
+            }
+
+            .form-field {
+                grid-column: 1 / -1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header class="site-header">
+
+    <a href="index.html" class="brand">
+
+        <span class="brand-mark">A</span>
+
+        <span class="brand-text">
+            <strong>APPLE FURNITURE</strong>
+            <small>FURNITURE & INTERIORS</small>
+        </span>
+
+    </a>
+
+    <nav class="desktop-nav">
+
+        <a href="index.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="collections.html">Collections</a>
+        <a href="about.html">Our Story</a>
+        <a href="contact.html" class="active">Contact</a>
+
+    </nav>
+
+    <div class="header-actions">
+
+        <a href="shop.html" class="shop-link">
+            Shop
+        </a>
+
+        <a
+            href="cart.html"
+            class="cart-button"
+            aria-label="View cart"
+        >
+
+            <svg viewBox="0 0 24 24">
+                <path d="M3 4h2l2.4 11.2a2 2 0 0 0 2 1.6h7.8a2 2 0 0 0 1.9-1.4L21 8H6"></path>
+                <circle cx="10" cy="20" r="1"></circle>
+                <circle cx="18" cy="20" r="1"></circle>
+            </svg>
+
+            <span class="cart-count">0</span>
+
+        </a>
+
+        <button
+            type="button"
+            class="mobile-menu-button"
+            aria-label="Open menu"
+            aria-expanded="false"
+        >
+            <span></span>
+            <span></span>
+        </button>
+
+    </div>
+
+</header>
+
+
+<!-- =====================================================
+     MOBILE NAVIGATION
+===================================================== -->
+
+<div class="mobile-nav">
+
+    <div class="mobile-nav-head">
+
+        <span>MENU</span>
+
+        <button
+            type="button"
+            class="close-mobile"
+            aria-label="Close menu"
+        >
+            ×
+        </button>
+
+    </div>
+
+    <nav>
+
+        <a href="index.html">
+            <small>01</small>
+            Home
+        </a>
+
+        <a href="shop.html">
+            <small>02</small>
+            Shop
+        </a>
+
+        <a href="collections.html">
+            <small>03</small>
+            Collections
+        </a>
+
+        <a href="about.html">
+            <small>04</small>
+            Our Story
+        </a>
+
+        <a href="contact.html" class="active">
+            <small>05</small>
+            Contact
+        </a>
+
+    </nav>
+
+</div>
+
+
+<main>
+
+<!-- =====================================================
+     CONTACT HERO
+===================================================== -->
+
+<section class="contact-hero">
+
+    <div class="hero-image">
+
+        <img
+            src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=2200&q=90"
+            alt="Contemporary living room with elegant furniture"
+            fetchpriority="high"
+        >
+
+    </div>
+
+    <div class="hero-overlay"></div>
+
+    <div class="contact-hero-content">
+
+        <span class="eyebrow">
+            WE'D LOVE TO HEAR FROM YOU
+        </span>
+
+        <h1>
+            Let's make
+            <em>your space beautiful.</em>
+        </h1>
+
+        <p>
+            Whether you're looking for a statement sofa,
+            a beautiful bedroom set, dining furniture
+            or help choosing the right pieces,
+            we're here to assist.
+        </p>
+
+    </div>
+
+    <div class="hero-scroll">
+
+        <span>SCROLL TO CONNECT</span>
+
+        <i></i>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     CONTACT INTRO
+===================================================== -->
+
+<section class="contact-intro">
+
+    <div class="contact-intro-inner">
+
+        <div class="section-label">
+            <span>01</span>
+            GET IN TOUCH
+        </div>
+
+        <div class="intro-copy">
+
+            <h2>
+                Your space deserves
+                <em>the right furniture.</em>
+            </h2>
+
+            <p>
+                Talk to Apple Furniture about our sofas,
+                beds, dining sets, office furniture,
+                wardrobes, product availability,
+                pricing and delivery enquiries.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     CONTACT DETAILS
+===================================================== -->
+
+<section class="contact-details">
+
+    <div class="contact-grid">
+
+        <!-- CONTACT CARD 01 -->
+
+        <article class="contact-card">
+
+            <div class="contact-card-number">
+                01
+            </div>
+
+            <div class="contact-card-top">
+
+                <span class="card-eyebrow">
+                    PRODUCT ENQUIRIES
+                </span>
+
+                <h3>
+                    Furniture
+                    <em>Specialists</em>
+                </h3>
+
+            </div>
+
+            <div class="phone-list">
+
+                <a href="shop.html?category=sofas">
+                    <span>Sofas & Seating</span>
+                    <small>VIEW ↗</small>
+                </a>
+
+                <a href="shop.html?category=beds">
+                    <span>Beds & Bedroom</span>
+                    <small>VIEW ↗</small>
+                </a>
+
+                <a href="shop.html?category=dining">
+                    <span>Dining Furniture</span>
+                    <small>VIEW ↗</small>
+                </a>
+
+            </div>
+
+            <a
+                href="#contact-form"
+                class="whatsapp-link"
+            >
+                Ask About Furniture
+                <strong>↗</strong>
+            </a>
+
+        </article>
+
+
+        <!-- CONTACT CARD 02 -->
+
+        <article class="contact-card featured-contact">
+
+            <div class="contact-card-number">
+                02
+            </div>
+
+            <div class="contact-card-top">
+
+                <span class="card-eyebrow">
+                    ORDERS & ASSISTANCE
+                </span>
+
+                <h3>
+                    Customer
+                    <em>Support</em>
+                </h3>
+
+            </div>
+
+            <div class="phone-list">
+
+                <a href="cart.html">
+                    <span>Your Shopping Cart</span>
+                    <small>VIEW ↗</small>
+                </a>
+
+                <a href="shop.html?category=office">
+                    <span>Office Furniture</span>
+                    <small>VIEW ↗</small>
+                </a>
+
+                <a href="shop.html?category=storage">
+                    <span>Wardrobes & Storage</span>
+                    <small>VIEW ↗</small>
+                </a>
+
+            </div>
+
+            <a
+                href="#contact-form"
+                class="whatsapp-link"
+            >
+                Enquire About an Order
+                <strong>↗</strong>
+            </a>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     CONTACT FORM
+===================================================== -->
+
+<section class="contact-form-section" id="contact-form">
+
+    <div class="contact-form-inner">
+
+        <div class="form-intro">
+
+            <span class="section-label">
+                02 — SEND AN ENQUIRY
+            </span>
+
+            <h2>
+                Tell us what
+                you're looking for.
+            </h2>
+
+            <p>
+                Have a furniture enquiry, a question
+                about a product or need assistance
+                with an order?
+
+                Share a few details and prepare
+                your message for our team on WhatsApp.
+            </p>
+
+        </div>
+
+        <form class="contact-form" id="furnitureContactForm">
+
+            <div class="form-field">
+
+                <label for="customerName">
+                    Your Name
+                </label>
+
+                <input
+                    type="text"
+                    id="customerName"
+                    name="name"
+                    placeholder="Enter your full name"
+                    autocomplete="name"
+                    required
+                >
+
+            </div>
+
+            <div class="form-field">
+
+                <label for="customerPhone">
+                    Phone Number
+                </label>
+
+                <input
+                    type="tel"
+                    id="customerPhone"
+                    name="phone"
+                    placeholder="+256..."
+                    autocomplete="tel"
+                    required
+                >
+
+            </div>
+
+            <div class="form-field full">
+
+                <label for="enquiryType">
+                    What Can We Help With?
+                </label>
+
+                <select
+                    id="enquiryType"
+                    name="enquiry"
+                    required
+                >
+
+                    <option value="">
+                        Select an enquiry
+                    </option>
+
+                    <option value="Sofas & Seating">
+                        Sofas & Seating
+                    </option>
+
+                    <option value="Beds & Bedroom">
+                        Beds & Bedroom
+                    </option>
+
+                    <option value="Dining Furniture">
+                        Dining Furniture
+                    </option>
+
+                    <option value="Office Furniture">
+                        Office Furniture
+                    </option>
+
+                    <option value="Wardrobes & Storage">
+                        Wardrobes & Storage
+                    </option>
+
+                    <option value="Chairs & Stools">
+                        Chairs & Stools
+                    </option>
+
+                    <option value="Orders & Delivery">
+                        Orders & Delivery
+                    </option>
+
+                    <option value="General Enquiry">
+                        General Enquiry
+                    </option>
+
+                </select>
+
+            </div>
+
+            <div class="form-field full">
+
+                <label for="customerMessage">
+                    Your Message
+                </label>
+
+                <textarea
+                    id="customerMessage"
+                    name="message"
+                    placeholder="Tell us about the furniture you're interested in..."
+                    required
+                ></textarea>
+
+            </div>
+
+            <button
+                type="submit"
+                class="form-submit"
+            >
+                <span>PREPARE WHATSAPP ENQUIRY</span>
+                <strong>↗</strong>
+            </button>
+
+            <p class="form-note" id="formNote">
+                Your message will open in WhatsApp after
+                Apple Furniture's official WhatsApp number
+                has been configured.
+            </p>
+
+        </form>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     VISIT / DISCOVER
+===================================================== -->
+
+<section class="visit-section">
+
+    <div class="visit-image">
+
+        <img
+            src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=2200&q=90"
+            alt="Elegant furnished interior"
+            loading="lazy"
+        >
+
+    </div>
+
+    <div class="visit-overlay"></div>
+
+    <div class="visit-content">
+
+        <span>
+            DISCOVER APPLE FURNITURE
+        </span>
+
+        <h2>
+            Come discover
+            <em>the difference.</em>
+        </h2>
+
+        <p>
+            Explore our furniture collections,
+            compare styles and find the right
+            pieces for your home or workspace.
+        </p>
+
+        <a href="collections.html">
+            Explore our collections
+            <strong>↗</strong>
+        </a>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer class="site-footer">
+
+    <div class="footer-top">
+
+        <div class="footer-brand">
+
+            <div class="footer-mark">
+                A
+            </div>
+
+            <h3>
+                APPLE FURNITURE
+            </h3>
+
+            <p>
+                Furniture & Interiors
+            </p>
+
+        </div>
+
+        <div class="footer-nav">
+
+            <div>
+
+                <span>EXPLORE</span>
+
+                <a href="index.html">Home</a>
+                <a href="shop.html">Shop</a>
+                <a href="collections.html">Collections</a>
+                <a href="about.html">Our Story</a>
+                <a href="contact.html">Contact</a>
+
+            </div>
+
+            <div>
+
+                <span>SHOP</span>
+
+                <a href="shop.html?category=sofas">
+                    Sofas
+                </a>
+
+                <a href="shop.html?category=beds">
+                    Beds
+                </a>
+
+                <a href="shop.html?category=dining">
+                    Dining
+                </a>
+
+                <a href="shop.html?category=office">
+                    Office
+                </a>
+
+                <a href="cart.html">
+                    Your Cart
+                </a>
+
+            </div>
+
+            <div>
+
+                <span>CONTACT</span>
+
+                <a href="#contact-form">
+                    Product Enquiries
+                </a>
+
+                <a href="#contact-form">
+                    Orders & Delivery
+                </a>
+
+                <a href="#contact-form">
+                    Get in Touch
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+
+        <span>
+            © 2026 Apple Furniture Uganda
+        </span>
+
+        <span>
+            FURNITURE FOR BEAUTIFUL LIVING.
+        </span>
+
+    </div>
+
+</footer>
+
+
+<!-- =====================================================
+     SUCCESS TOAST
+===================================================== -->
+
+<div class="success-toast" id="successToast" role="status">
+
+    <span>✓</span>
+
+    <div>
+
+        <strong id="toastTitle">
+            Message ready
+        </strong>
+
+        <small id="toastMessage">
+            Your enquiry is ready.
+        </small>
+
+    </div>
+
+</div>
+
+
+<!-- =====================================================
+     SCRIPTS
+===================================================== -->
+
+<script src="contact.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+    /*
+      IMPORTANT:
+      Replace the empty value with Apple Furniture's
+      official WhatsApp number in international format.
+
+      Example format: 2567XXXXXXXX
+
+      Do not include the + sign or spaces.
+    */
+
+    const APPLE_WHATSAPP_NUMBER = "";
+
+    const CART_KEY = "appleFurnitureCart";
+
+    const $ = selector => document.querySelector(selector);
+
+    const menuButton = $(".mobile-menu-button");
+    const mobileNav = $(".mobile-nav");
+    const closeMobile = $(".close-mobile");
+
+    /* MOBILE NAVIGATION */
+
+    function closeMenu() {
+        mobileNav?.classList.remove("active", "open");
+        menuButton?.setAttribute("aria-expanded", "false");
+        document.body.classList.remove("menu-open");
+    }
+
+    menuButton?.addEventListener("click", () => {
+        const isOpen = mobileNav?.classList.contains("active");
+
+        if (isOpen) {
+            closeMenu();
+        } else {
+            mobileNav?.classList.add("active", "open");
+            menuButton.setAttribute("aria-expanded", "true");
+            document.body.classList.add("menu-open");
+        }
+    });
+
+    closeMobile?.addEventListener("click", closeMenu);
+
+    document.addEventListener("keydown", event => {
+        if (event.key === "Escape") closeMenu();
+    });
+
+    /* CART COUNTER */
+
+    function updateCartCount() {
+        let cart = [];
+
+        try {
+            cart = JSON.parse(
+                localStorage.getItem(CART_KEY) || "[]"
+            );
+        } catch {
+            cart = [];
+        }
+
+        const total = Array.isArray(cart)
+            ? cart.reduce(
+                (sum, item) =>
+                    sum + (Number(item.quantity) || 0),
+                0
+            )
+            : 0;
+
+        document.querySelectorAll(".cart-count")
+            .forEach(element => {
+                element.textContent = total;
+            });
+    }
+
+    updateCartCount();
+
+    window.addEventListener("storage", event => {
+        if (event.key === CART_KEY) updateCartCount();
+    });
+
+    /* TOAST */
+
+    let toastTimer;
+
+    function showToast(title, message) {
+        const toast = $("#successToast");
+        if (!toast) return;
+
+        $("#toastTitle").textContent = title;
+        $("#toastMessage").textContent = message;
+
+        toast.classList.add("show");
+
+        clearTimeout(toastTimer);
+
+        toastTimer = setTimeout(() => {
+            toast.classList.remove("show");
+        }, 3500);
+    }
+
+    /* WHATSAPP ENQUIRY */
+
+    const form = $("#furnitureContactForm");
+
+    form?.addEventListener("submit", event => {
+        event.preventDefault();
+
+        if (!form.reportValidity()) return;
+
+        const name = $("#customerName").value.trim();
+        const phone = $("#customerPhone").value.trim();
+        const enquiry = $("#enquiryType").value;
+        const message = $("#customerMessage").value.trim();
+
+        const text = [
+            "Hello Apple Furniture,",
+            "",
+            "I would like to make an enquiry.",
+            "",
+            "Name: " + name,
+            "Phone: " + phone,
+            "Enquiry: " + enquiry,
+            "",
+            "Message:",
+            message
+        ].join("\n");
+
+        const number = APPLE_WHATSAPP_NUMBER.replace(/\D/g, "");
+
+        if (!/^256\d{9}$/.test(number)) {
+            showToast(
+                "WhatsApp not configured",
+                "Please add Apple Furniture's official number."
+            );
+
+            return;
+        }
+
+        const whatsappURL =
+            "https://wa.me/" +
+            number +
+            "?text=" +
+            encodeURIComponent(text);
+
+        window.open(
+            whatsappURL,
+            "_blank",
+            "noopener,noreferrer"
+        );
+
+        showToast(
+            "WhatsApp opened",
+            "Review your message and tap Send."
+        );
+    });
+
+});
+</script>
+
+</body>
+</html>

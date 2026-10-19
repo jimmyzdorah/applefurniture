@@ -1,0 +1,1151 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Shop Furniture | Apple Furniture Uganda</title>
+
+    <meta
+        name="description"
+        content="Shop premium sofas, beds, dining tables, wardrobes, office furniture and home accessories at Apple Furniture Uganda."
+    >
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="shop.css">
+
+    <style>
+        /* Remove italic styling throughout the shop */
+        em,
+        i {
+            font-style: normal !important;
+        }
+
+        /* Keep headings elegant without italics */
+        .shop-heading h1 em,
+        .shop-banner-content h2 em {
+            font-style: normal !important;
+            font-weight: 400;
+        }
+    </style>
+
+</head>
+
+<body>
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header class="shop-header">
+
+    <a href="index.html" class="brand">
+
+        <span class="brand-mark">A</span>
+
+        <span class="brand-text">
+            <strong>APPLE</strong>
+            <small>FURNITURE</small>
+        </span>
+
+    </a>
+
+
+    <nav class="desktop-nav">
+
+        <a href="index.html">Home</a>
+
+        <a href="shop.html" class="active">Shop</a>
+
+        <a href="collections.html">Collections</a>
+
+        <a href="about.html">Our Story</a>
+
+        <a href="contact.html">Contact</a>
+
+    </nav>
+
+
+    <div class="header-actions">
+
+        <button
+            class="search-button"
+            type="button"
+            aria-label="Search furniture"
+        >
+
+            <svg viewBox="0 0 24 24">
+                <circle cx="11" cy="11" r="7"></circle>
+                <path d="M20 20L16.2 16.2"></path>
+            </svg>
+
+        </button>
+
+
+        <a
+            href="cart.html"
+            class="cart-button"
+            aria-label="View shopping cart"
+        >
+
+            <svg viewBox="0 0 24 24">
+                <path d="M3 4h2l2.4 11.2a2 2 0 0 0 2 1.6h7.8a2 2 0 0 0 1.9-1.4L21 8H6"></path>
+                <circle cx="10" cy="20" r="1"></circle>
+                <circle cx="18" cy="20" r="1"></circle>
+            </svg>
+
+            <span class="cart-count">0</span>
+
+        </a>
+
+
+        <button
+            class="mobile-menu-button"
+            type="button"
+            aria-label="Open navigation"
+        >
+
+            <span></span>
+            <span></span>
+
+        </button>
+
+    </div>
+
+</header>
+
+
+<!-- =====================================================
+     SEARCH OVERLAY
+===================================================== -->
+
+<div class="search-overlay">
+
+    <button
+        class="close-search"
+        type="button"
+        aria-label="Close search"
+    >
+        ×
+    </button>
+
+    <div class="search-box">
+
+        <span>SEARCH APPLE FURNITURE</span>
+
+        <div class="search-input-wrap">
+
+            <input
+                type="search"
+                id="searchInput"
+                placeholder="Search sofas, beds, dining sets..."
+                autocomplete="off"
+            >
+
+            <svg viewBox="0 0 24 24">
+                <circle cx="11" cy="11" r="7"></circle>
+                <path d="M20 20L16.2 16.2"></path>
+            </svg>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =====================================================
+     MOBILE NAVIGATION
+===================================================== -->
+
+<div class="mobile-nav">
+
+    <div class="mobile-nav-head">
+
+        <span>MENU</span>
+
+        <button
+            class="close-mobile"
+            type="button"
+            aria-label="Close navigation"
+        >
+            ×
+        </button>
+
+    </div>
+
+    <nav>
+
+        <a href="index.html">
+            <small>01</small>
+            Home
+        </a>
+
+        <a href="shop.html">
+            <small>02</small>
+            Shop
+        </a>
+
+        <a href="index.html#collections">
+            <small>03</small>
+            Collections
+        </a>
+
+        <a href="index.html#about">
+            <small>04</small>
+            Our Story
+        </a>
+
+        <a href="index.html#contact">
+            <small>05</small>
+            Contact
+        </a>
+
+    </nav>
+
+</div>
+
+
+<main>
+
+<!-- =====================================================
+     SHOP HERO
+===================================================== -->
+
+<section class="shop-hero">
+
+    <div class="shop-hero-inner">
+
+        <div class="breadcrumbs">
+
+            <a href="index.html">Home</a>
+
+            <span>/</span>
+
+            <span>Shop Furniture</span>
+
+        </div>
+
+
+        <div class="shop-heading">
+
+            <div>
+
+                <span class="eyebrow">
+                    THE APPLE FURNITURE COLLECTION
+                </span>
+
+                <h1>
+                    Shop
+                    <em>furniture.</em>
+                </h1>
+
+            </div>
+
+
+            <p>
+                Discover beautifully designed sofas, beds,
+                dining sets, wardrobes and statement furniture
+                that bring comfort, character and timeless
+                style into your home.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     SHOP CONTROLS
+===================================================== -->
+
+<section class="shop-section">
+
+    <div class="shop-container">
+
+
+        <!-- CATEGORY BAR -->
+
+        <div class="category-bar">
+
+            <div class="categories">
+
+                <button
+                    type="button"
+                    class="category active"
+                    data-category="all"
+                >
+                    All Furniture
+                </button>
+
+                <button
+                    type="button"
+                    class="category"
+                    data-category="sofas"
+                >
+                    Sofas
+                </button>
+
+                <button
+                    type="button"
+                    class="category"
+                    data-category="beds"
+                >
+                    Beds
+                </button>
+
+                <button
+                    type="button"
+                    class="category"
+                    data-category="dining"
+                >
+                    Dining
+                </button>
+
+                <button
+                    type="button"
+                    class="category"
+                    data-category="office"
+                >
+                    Office
+                </button>
+
+                <button
+                    type="button"
+                    class="category"
+                    data-category="storage"
+                >
+                    Storage
+                </button>
+
+                <button
+                    type="button"
+                    class="category"
+                    data-category="chairs"
+                >
+                    Chairs
+                </button>
+
+                <button
+                    type="button"
+                    class="category"
+                    data-category="new"
+                >
+                    New Arrivals
+                </button>
+
+                <button
+                    type="button"
+                    class="category"
+                    data-category="featured"
+                >
+                    Featured
+                </button>
+
+            </div>
+
+
+            <!-- MOBILE FILTER BUTTON -->
+
+            <div class="mobile-filter-sort">
+
+                <button
+                    class="filter-trigger"
+                    type="button"
+                >
+
+                    <span>FILTER</span>
+
+                    <svg viewBox="0 0 24 24">
+                        <path d="M4 6h16M7 12h10M10 18h4"></path>
+                    </svg>
+
+                </button>
+
+            </div>
+
+
+            <!-- SORTING -->
+
+            <div class="sort-wrapper">
+
+                <span>SORT</span>
+
+                <select id="sortProducts">
+
+                    <option value="featured">
+                        Featured
+                    </option>
+
+                    <option value="newest">
+                        Newest
+                    </option>
+
+                    <option value="price-low">
+                        Price: Low to High
+                    </option>
+
+                    <option value="price-high">
+                        Price: High to Low
+                    </option>
+
+                </select>
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================================
+             SHOP BODY
+        ================================================= -->
+
+        <div class="shop-body">
+
+
+            <!-- =============================================
+                 DESKTOP FILTERS
+            ============================================= -->
+
+            <aside class="filters">
+
+                <div class="filter-header">
+
+                    <span>FILTERS</span>
+
+                    <button
+                        id="clearFilters"
+                        type="button"
+                    >
+                        Clear all
+                    </button>
+
+                </div>
+
+
+                <!-- CATEGORY FILTER -->
+
+                <div class="filter-group">
+
+                    <button
+                        class="filter-title"
+                        type="button"
+                    >
+
+                        Furniture Category
+
+                        <span>−</span>
+
+                    </button>
+
+
+                    <div class="filter-content">
+
+                        <label>
+                            <input
+                                type="checkbox"
+                                value="sofas"
+                                data-filter="category"
+                            >
+
+                            <span>Sofas & Seating</span>
+                        </label>
+
+
+                        <label>
+                            <input
+                                type="checkbox"
+                                value="beds"
+                                data-filter="category"
+                            >
+
+                            <span>Beds & Bedroom</span>
+                        </label>
+
+
+                        <label>
+                            <input
+                                type="checkbox"
+                                value="dining"
+                                data-filter="category"
+                            >
+
+                            <span>Dining Furniture</span>
+                        </label>
+
+
+                        <label>
+                            <input
+                                type="checkbox"
+                                value="office"
+                                data-filter="category"
+                            >
+
+                            <span>Office Furniture</span>
+                        </label>
+
+
+                        <label>
+                            <input
+                                type="checkbox"
+                                value="storage"
+                                data-filter="category"
+                            >
+
+                            <span>Wardrobes & Storage</span>
+                        </label>
+
+
+                        <label>
+                            <input
+                                type="checkbox"
+                                value="chairs"
+                                data-filter="category"
+                            >
+
+                            <span>Chairs & Stools</span>
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PRICE FILTER -->
+
+                <div class="filter-group">
+
+                    <button
+                        class="filter-title"
+                        type="button"
+                    >
+
+                        Price Range
+
+                        <span>−</span>
+
+                    </button>
+
+
+                    <div class="filter-content">
+
+                        <label>
+                            <input
+                                type="radio"
+                                name="price"
+                                value="0-500000"
+                                data-filter="price"
+                            >
+
+                            <span>Under UGX 500,000</span>
+                        </label>
+
+
+                        <label>
+                            <input
+                                type="radio"
+                                name="price"
+                                value="500000-1500000"
+                                data-filter="price"
+                            >
+
+                            <span>UGX 500k – 1.5M</span>
+                        </label>
+
+
+                        <label>
+                            <input
+                                type="radio"
+                                name="price"
+                                value="1500000-3000000"
+                                data-filter="price"
+                            >
+
+                            <span>UGX 1.5M – 3M</span>
+                        </label>
+
+
+                        <label>
+                            <input
+                                type="radio"
+                                name="price"
+                                value="3000000-999999999"
+                                data-filter="price"
+                            >
+
+                            <span>UGX 3,000,000+</span>
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+                <!-- COLOUR FILTER -->
+
+                <div class="filter-group">
+
+                    <button
+                        class="filter-title"
+                        type="button"
+                    >
+
+                        Colour & Finish
+
+                        <span>−</span>
+
+                    </button>
+
+
+                    <div class="filter-content color-filter">
+
+                        <label>
+                            <input
+                                type="checkbox"
+                                value="cream"
+                                data-filter="color"
+                            >
+
+                            <i class="filter-color cream"></i>
+
+                            <span>Cream</span>
+                        </label>
+
+
+                        <label>
+                            <input
+                                type="checkbox"
+                                value="grey"
+                                data-filter="color"
+                            >
+
+                            <i class="filter-color grey"></i>
+
+                            <span>Grey</span>
+                        </label>
+
+
+                        <label>
+                            <input
+                                type="checkbox"
+                                value="charcoal"
+                                data-filter="color"
+                            >
+
+                            <i class="filter-color charcoal"></i>
+
+                            <span>Charcoal</span>
+                        </label>
+
+
+                        <label>
+                            <input
+                                type="checkbox"
+                                value="brown"
+                                data-filter="color"
+                            >
+
+                            <i class="filter-color brown"></i>
+
+                            <span>Walnut Brown</span>
+                        </label>
+
+
+                        <label>
+                            <input
+                                type="checkbox"
+                                value="white"
+                                data-filter="color"
+                            >
+
+                            <i
+                                class="filter-color white"
+                                style="background:#f5f3ef;border:1px solid #ddd;"
+                            ></i>
+
+                            <span>White</span>
+                        </label>
+
+
+                        <label>
+                            <input
+                                type="checkbox"
+                                value="black"
+                                data-filter="color"
+                            >
+
+                            <i
+                                class="filter-color black"
+                                style="background:#191919;"
+                            ></i>
+
+                            <span>Black</span>
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+                <!-- AVAILABILITY FILTER -->
+
+                <div class="filter-group">
+
+                    <button
+                        class="filter-title"
+                        type="button"
+                    >
+
+                        Availability
+
+                        <span>−</span>
+
+                    </button>
+
+
+                    <div class="filter-content">
+
+                        <label>
+                            <input
+                                type="checkbox"
+                                value="available"
+                                data-filter="availability"
+                            >
+
+                            <span>In Stock</span>
+                        </label>
+
+
+                        <label>
+                            <input
+                                type="checkbox"
+                                value="sale"
+                                data-filter="availability"
+                            >
+
+                            <span>On Sale</span>
+                        </label>
+
+                    </div>
+
+                </div>
+
+            </aside>
+
+
+            <!-- =============================================
+                 PRODUCTS AREA
+            ============================================= -->
+
+            <div class="products-area">
+
+                <div class="products-top">
+
+                    <span id="productCount">
+                        0 furniture pieces
+                    </span>
+
+
+                    <div
+                        class="active-filters"
+                        id="activeFilters"
+                    ></div>
+
+                </div>
+
+
+                <!-- Furniture products rendered by shop.js -->
+
+                <div
+                    class="products-grid"
+                    id="productsGrid"
+                ></div>
+
+
+                <!-- EMPTY STATE -->
+
+                <div
+                    class="no-products"
+                    id="noProducts"
+                >
+
+                    <div class="no-products-icon">
+                        ✦
+                    </div>
+
+                    <h3>
+                        No furniture found.
+                    </h3>
+
+                    <p>
+                        Try adjusting your filters or
+                        exploring another furniture category.
+                    </p>
+
+                    <button
+                        id="resetEmpty"
+                        type="button"
+                    >
+                        View all furniture
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     FURNITURE PROMOTIONAL BANNER
+===================================================== -->
+
+<section class="shop-banner">
+
+    <div class="shop-banner-image">
+
+        <img
+            src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=2200&q=90"
+            alt="Beautifully furnished modern living room"
+            loading="lazy"
+        >
+
+    </div>
+
+
+    <div class="shop-banner-overlay"></div>
+
+
+    <div class="shop-banner-content">
+
+        <span>
+            THE LIVING ROOM EDIT
+        </span>
+
+
+        <h2>
+            Beautiful spaces
+            <em>begin here.</em>
+        </h2>
+
+
+        <a href="shop.html?category=sofas">
+
+            Explore sofas
+
+            <strong>↗</strong>
+
+        </a>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<!-- =====================================================
+     MOBILE FILTER DRAWER
+===================================================== -->
+
+<div class="filter-backdrop"></div>
+
+
+<aside class="mobile-filters">
+
+    <div class="mobile-filter-head">
+
+        <strong>Filter Furniture</strong>
+
+        <button
+            class="close-filters"
+            type="button"
+            aria-label="Close filters"
+        >
+            ×
+        </button>
+
+    </div>
+
+
+    <div class="mobile-filter-content">
+
+
+        <!-- CATEGORY -->
+
+        <div class="mobile-filter-section">
+
+            <span>Furniture Category</span>
+
+
+            <label>
+                <input
+                    type="checkbox"
+                    value="sofas"
+                    data-filter="category"
+                >
+                Sofas & Seating
+            </label>
+
+
+            <label>
+                <input
+                    type="checkbox"
+                    value="beds"
+                    data-filter="category"
+                >
+                Beds & Bedroom
+            </label>
+
+
+            <label>
+                <input
+                    type="checkbox"
+                    value="dining"
+                    data-filter="category"
+                >
+                Dining Furniture
+            </label>
+
+
+            <label>
+                <input
+                    type="checkbox"
+                    value="office"
+                    data-filter="category"
+                >
+                Office Furniture
+            </label>
+
+
+            <label>
+                <input
+                    type="checkbox"
+                    value="storage"
+                    data-filter="category"
+                >
+                Wardrobes & Storage
+            </label>
+
+
+            <label>
+                <input
+                    type="checkbox"
+                    value="chairs"
+                    data-filter="category"
+                >
+                Chairs & Stools
+            </label>
+
+        </div>
+
+
+        <!-- PRICE -->
+
+        <div class="mobile-filter-section">
+
+            <span>Price Range</span>
+
+
+            <label>
+                <input
+                    type="radio"
+                    name="mobile-price"
+                    value="0-500000"
+                    data-filter="price"
+                >
+                Under UGX 500,000
+            </label>
+
+
+            <label>
+                <input
+                    type="radio"
+                    name="mobile-price"
+                    value="500000-1500000"
+                    data-filter="price"
+                >
+                UGX 500k – 1.5M
+            </label>
+
+
+            <label>
+                <input
+                    type="radio"
+                    name="mobile-price"
+                    value="1500000-3000000"
+                    data-filter="price"
+                >
+                UGX 1.5M – 3M
+            </label>
+
+
+            <label>
+                <input
+                    type="radio"
+                    name="mobile-price"
+                    value="3000000-999999999"
+                    data-filter="price"
+                >
+                UGX 3,000,000+
+            </label>
+
+        </div>
+
+
+        <!-- COLOURS -->
+
+        <div class="mobile-filter-section">
+
+            <span>Colour & Finish</span>
+
+
+            <label>
+                <input
+                    type="checkbox"
+                    value="cream"
+                    data-filter="color"
+                >
+                Cream
+            </label>
+
+
+            <label>
+                <input
+                    type="checkbox"
+                    value="grey"
+                    data-filter="color"
+                >
+                Grey
+            </label>
+
+
+            <label>
+                <input
+                    type="checkbox"
+                    value="charcoal"
+                    data-filter="color"
+                >
+                Charcoal
+            </label>
+
+
+            <label>
+                <input
+                    type="checkbox"
+                    value="brown"
+                    data-filter="color"
+                >
+                Walnut Brown
+            </label>
+
+
+            <label>
+                <input
+                    type="checkbox"
+                    value="white"
+                    data-filter="color"
+                >
+                White
+            </label>
+
+
+            <label>
+                <input
+                    type="checkbox"
+                    value="black"
+                    data-filter="color"
+                >
+                Black
+            </label>
+
+        </div>
+
+
+        <!-- AVAILABILITY -->
+
+        <div class="mobile-filter-section">
+
+            <span>Availability</span>
+
+
+            <label>
+                <input
+                    type="checkbox"
+                    value="available"
+                    data-filter="availability"
+                >
+                In Stock
+            </label>
+
+
+            <label>
+                <input
+                    type="checkbox"
+                    value="sale"
+                    data-filter="availability"
+                >
+                On Sale
+            </label>
+
+        </div>
+
+    </div>
+
+
+    <div class="mobile-filter-footer">
+
+        <button
+            id="mobileClear"
+            type="button"
+        >
+            Clear
+        </button>
+
+
+        <button
+            id="applyMobileFilters"
+            type="button"
+        >
+            Show Furniture
+        </button>
+
+    </div>
+
+</aside>
+
+
+<!-- =====================================================
+     TOAST
+===================================================== -->
+
+<div class="toast" role="status" aria-live="polite">
+
+    <span>✓</span>
+
+    <p>Added to your cart</p>
+
+</div>
+
+
+<script src="shop.js"></script>
+
+</body>
+</html>

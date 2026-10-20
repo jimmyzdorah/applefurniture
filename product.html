@@ -1,25 +1,84 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Product | Mirembe Beddings & Curtains</title>
+    <title>Product Details | Apple Furniture Uganda</title>
 
     <meta
         name="description"
-        content="Discover premium bedding and curtains from Mirembe."
+        content="Explore furniture at Apple Furniture Uganda. View product images, prices, colours, dimensions and details for sofas, beds, dining sets, office furniture and more."
     >
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link
-        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap"
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
         rel="stylesheet"
     >
 
     <link rel="stylesheet" href="product.css">
+
+    <style>
+        /* Apple Furniture: no italic typography */
+        em {
+            font-style: normal !important;
+        }
+
+        .gallery-main img,
+        .gallery-thumbnails img,
+        .related-grid img {
+            object-fit: cover;
+        }
+
+        button {
+            cursor: pointer;
+        }
+
+        button:focus-visible,
+        a:focus-visible {
+            outline: 2px solid #9b7956;
+            outline-offset: 3px;
+        }
+
+        .product-reference {
+            margin: 12px 0 20px;
+            color: #8a8075;
+            font-family: "DM Sans", sans-serif;
+            font-size: 11px;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+
+        .furniture-note {
+            margin-top: 20px;
+            padding: 17px 20px;
+            border-left: 2px solid #9b7956;
+            background: #f6f1ea;
+        }
+
+        .furniture-note p {
+            margin: 0;
+            color: #776e64;
+            font-size: 13px;
+            line-height: 1.8;
+        }
+
+        .stock-status.out-of-stock .stock-dot {
+            background: #a4544c;
+        }
+
+        .stock-status.out-of-stock #stockText {
+            color: #a4544c;
+        }
+
+        .stock-status.in-stock .stock-dot {
+            background: #71846b;
+        }
+    </style>
 </head>
 
 <body>
@@ -32,63 +91,69 @@
 
     <a href="index.html" class="brand">
 
-        <span class="brand-mark">M</span>
+        <span class="brand-mark">
+            A
+        </span>
 
         <span class="brand-copy">
-            <strong>MIREMBE</strong>
-            <small>BEDDINGS & CURTAINS</small>
+            <strong>APPLE FURNITURE</strong>
+            <small>FURNITURE & INTERIORS</small>
         </span>
 
     </a>
 
-
     <nav class="desktop-nav">
 
         <a href="index.html">Home</a>
-        <a href="shop.html">Shop</a>
-        <a href="index.html#collections">Collections</a>
-        <a href="index.html#about">Our Story</a>
-        <a href="index.html#contact">Contact</a>
+
+        <a href="shop.html" class="active">Shop</a>
+
+        <a href="collections.html">Collections</a>
+
+        <a href="about.html">Our Story</a>
+
+        <a href="contact.html">Contact</a>
 
     </nav>
-
 
     <div class="header-actions">
 
         <button
+            type="button"
             class="search-button"
-            aria-label="Search"
+            aria-label="Search furniture"
         >
-
             <svg viewBox="0 0 24 24">
                 <circle cx="11" cy="11" r="7"></circle>
                 <path d="M20 20L16.2 16.2"></path>
             </svg>
-
         </button>
-
 
         <a
             href="cart.html"
             class="cart-button"
+            aria-label="View shopping cart"
         >
-
             <svg viewBox="0 0 24 24">
+
                 <path d="M3 4h2l2.4 11.2a2 2 0 0 0 2 1.6h7.8a2 2 0 0 0 1.9-1.4L21 8H6"></path>
+
                 <circle cx="10" cy="20" r="1"></circle>
                 <circle cx="18" cy="20" r="1"></circle>
+
             </svg>
 
             <span class="cart-count">0</span>
-
         </a>
 
-
-        <button class="menu-button">
-
+        <button
+            type="button"
+            class="menu-button"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+        >
             <span></span>
             <span></span>
-
         </button>
 
     </div>
@@ -97,23 +162,32 @@
 
 
 <!-- =====================================================
-     SEARCH
+     SEARCH OVERLAY
 ===================================================== -->
 
 <div class="search-overlay">
 
-    <button class="close-search">×</button>
+    <button
+        type="button"
+        class="close-search"
+        aria-label="Close search"
+    >
+        ×
+    </button>
 
     <div class="search-container">
 
-        <span>SEARCH MIREMBE</span>
+        <span>
+            SEARCH APPLE FURNITURE
+        </span>
 
         <div class="search-input">
 
             <input
                 id="searchInput"
-                type="text"
-                placeholder="Search bedding, curtains..."
+                type="search"
+                placeholder="Search sofas, beds, dining sets..."
+                aria-label="Search furniture"
             >
 
             <svg viewBox="0 0 24 24">
@@ -129,7 +203,7 @@
 
 
 <!-- =====================================================
-     MOBILE NAV
+     MOBILE NAVIGATION
 ===================================================== -->
 
 <div class="mobile-nav">
@@ -138,12 +212,15 @@
 
         <span>MENU</span>
 
-        <button class="close-menu">
+        <button
+            type="button"
+            class="close-menu"
+            aria-label="Close navigation menu"
+        >
             ×
         </button>
 
     </div>
-
 
     <nav>
 
@@ -157,17 +234,17 @@
             Shop
         </a>
 
-        <a href="index.html#collections">
+        <a href="collections.html">
             <small>03</small>
             Collections
         </a>
 
-        <a href="index.html#about">
+        <a href="about.html">
             <small>04</small>
             Our Story
         </a>
 
-        <a href="index.html#contact">
+        <a href="contact.html">
             <small>05</small>
             Contact
         </a>
@@ -178,13 +255,12 @@
 
 
 <!-- =====================================================
-     PRODUCT
+     PRODUCT PAGE
 ===================================================== -->
 
 <main>
 
     <div class="product-page">
-
 
         <!-- BREADCRUMB -->
 
@@ -209,60 +285,59 @@
         </div>
 
 
-        <!-- PRODUCT LAYOUT -->
+        <!-- =================================================
+             PRODUCT LAYOUT
+        ================================================== -->
 
         <section class="product-layout">
 
-
-            <!-- =================================================
-                 IMAGE SIDE
-            ================================================== -->
+            <!-- =============================================
+                 IMAGE GALLERY
+            ============================================== -->
 
             <div class="gallery">
-
 
                 <div class="gallery-main">
 
                     <div
                         class="product-badge"
                         id="productBadge"
+                        hidden
                     >
                         NEW
                     </div>
 
-
                     <button
+                        type="button"
                         class="gallery-arrow gallery-prev"
-                        aria-label="Previous image"
+                        aria-label="Previous product image"
                     >
                         ←
                     </button>
 
-
                     <img
                         id="mainProductImage"
                         src=""
-                        alt=""
+                        alt="Furniture product"
                     >
 
-
                     <button
+                        type="button"
                         class="gallery-arrow gallery-next"
-                        aria-label="Next image"
+                        aria-label="Next product image"
                     >
                         →
                     </button>
 
-
                     <button
+                        type="button"
                         class="image-expand"
-                        aria-label="Expand image"
+                        aria-label="Expand product image"
                     >
                         ⤢
                     </button>
 
                 </div>
-
 
                 <div
                     class="gallery-thumbnails"
@@ -272,65 +347,72 @@
             </div>
 
 
-            <!-- =================================================
+            <!-- =============================================
                  PRODUCT DETAILS
-            ================================================== -->
+            ============================================== -->
 
             <div class="product-details">
 
+                <!-- CATEGORY -->
 
-                <div class="product-category" id="productCategory">
-                    BEDDINGS
+                <div
+                    class="product-category"
+                    id="productCategory"
+                >
+                    FURNITURE
                 </div>
 
+                <!-- NAME -->
 
                 <h1 id="productName">
-                    Signature Comfort Set
+                    Loading furniture...
                 </h1>
 
+                <!-- PRODUCT REFERENCE -->
 
-                <div class="rating">
-
-                    <div class="stars">
-                        ★★★★★
-                    </div>
-
-                    <span>
-                        4.9 · 12 reviews
-                    </span>
-
+                <div
+                    class="product-reference"
+                    id="productReference"
+                >
+                    APPLE FURNITURE
                 </div>
 
+                <!-- PRICE -->
 
-                <div class="price" id="productPrice">
-                    UGX 180,000
+                <div
+                    class="price"
+                    id="productPrice"
+                >
+                    UGX —
                 </div>
 
+                <!-- DESCRIPTION -->
 
                 <p
                     class="short-description"
                     id="productDescription"
                 >
-                    Beautifully made for everyday comfort,
-                    with a soft finish that makes your
-                    bedroom feel instantly more inviting.
+                    Discover furniture selected to bring
+                    comfort, beauty and character into
+                    your living space.
                 </p>
 
+                <!-- STOCK STATUS -->
 
-                <!-- STOCK -->
-
-                <div class="stock-status">
+                <div class="stock-status" id="stockStatus">
 
                     <span class="stock-dot"></span>
 
                     <span id="stockText">
-                        In stock
+                        Checking availability
                     </span>
 
                 </div>
 
 
-                <!-- COLOURS -->
+                <!-- =========================================
+                     COLOUR OPTIONS
+                ========================================== -->
 
                 <div
                     class="option-section"
@@ -340,15 +422,14 @@
                     <div class="option-heading">
 
                         <span>
-                            Colour
+                            Colour / Finish
                         </span>
 
                         <strong id="selectedColor">
-                            Cream
+                            Select finish
                         </strong>
 
                     </div>
-
 
                     <div
                         class="color-options"
@@ -358,7 +439,9 @@
                 </div>
 
 
-                <!-- SIZE -->
+                <!-- =========================================
+                     DIMENSIONS / SIZE OPTIONS
+                ========================================== -->
 
                 <div
                     class="option-section"
@@ -368,15 +451,14 @@
                     <div class="option-heading">
 
                         <span>
-                            Size
+                            Size / Configuration
                         </span>
 
                         <strong id="selectedSize">
-                            Select size
+                            See available options
                         </strong>
 
                     </div>
-
 
                     <div
                         class="size-options"
@@ -386,7 +468,9 @@
                 </div>
 
 
-                <!-- QUANTITY -->
+                <!-- =========================================
+                     QUANTITY
+                ========================================== -->
 
                 <div class="quantity-section">
 
@@ -394,18 +478,28 @@
                         Quantity
                     </span>
 
-
                     <div class="quantity-control">
 
-                        <button id="decreaseQuantity">
+                        <button
+                            type="button"
+                            id="decreaseQuantity"
+                            aria-label="Decrease quantity"
+                        >
                             −
                         </button>
 
-                        <span id="quantity">
+                        <span
+                            id="quantity"
+                            aria-live="polite"
+                        >
                             1
                         </span>
 
-                        <button id="increaseQuantity">
+                        <button
+                            type="button"
+                            id="increaseQuantity"
+                            aria-label="Increase quantity"
+                        >
                             +
                         </button>
 
@@ -414,11 +508,14 @@
                 </div>
 
 
-                <!-- ACTIONS -->
+                <!-- =========================================
+                     PURCHASE ACTIONS
+                ========================================== -->
 
                 <div class="purchase-actions">
 
                     <button
+                        type="button"
                         class="add-cart"
                         id="addCart"
                     >
@@ -429,21 +526,21 @@
                         <strong>
                             ↗
                         </strong>
-
                     </button>
 
-
                     <button
+                        type="button"
                         class="buy-now"
                         id="buyNow"
                     >
                         BUY NOW
                     </button>
 
-
                     <button
+                        type="button"
                         class="wishlist"
                         id="wishlist"
+                        aria-label="Add to wishlist"
                     >
                         ♡
                     </button>
@@ -451,31 +548,54 @@
                 </div>
 
 
-                <!-- INFO ACCORDION -->
+                <!-- FURNITURE ORDER NOTE -->
+
+                <div class="furniture-note">
+
+                    <p>
+                        Need help with dimensions, materials
+                        or choosing the right furniture?
+                        <a href="contact.html">
+                            Contact our team ↗
+                        </a>
+                    </p>
+
+                </div>
+
+
+                <!-- =========================================
+                     PRODUCT INFORMATION ACCORDION
+                ========================================== -->
 
                 <div class="product-information">
 
+                    <!-- DELIVERY -->
 
                     <div class="info-item">
 
-                        <button class="info-trigger">
-
+                        <button
+                            type="button"
+                            class="info-trigger"
+                        >
                             <span>
-                                Delivery
+                                Delivery & Assembly
                             </span>
 
                             <span>+</span>
-
                         </button>
 
                         <div class="info-content">
 
                             <p>
-                                We deliver across Kampala
-                                and selected areas around
-                                Uganda. Delivery charges are
-                                calculated according to your
-                                location at checkout.
+                                Delivery arrangements and
+                                charges depend on your
+                                location, furniture dimensions
+                                and access requirements.
+
+                                Contact our team to confirm
+                                delivery availability, timing
+                                and whether assembly is
+                                required or offered.
                             </p>
 
                         </div>
@@ -483,25 +603,31 @@
                     </div>
 
 
+                    <!-- PRODUCT DETAILS -->
+
                     <div class="info-item">
 
-                        <button class="info-trigger">
-
+                        <button
+                            type="button"
+                            class="info-trigger"
+                        >
                             <span>
-                                Product details
+                                Materials & Specifications
                             </span>
 
                             <span>+</span>
-
                         </button>
 
                         <div class="info-content">
 
                             <p>
-                                Carefully selected fabrics,
-                                refined finishes and
-                                practical designs made for
-                                beautiful everyday spaces.
+                                Materials, dimensions,
+                                finishes and configurations
+                                vary by furniture item.
+
+                                Please confirm the exact
+                                specifications with our team
+                                before completing your order.
                             </p>
 
                         </div>
@@ -509,26 +635,36 @@
                     </div>
 
 
+                    <!-- CARE -->
+
                     <div class="info-item">
 
-                        <button class="info-trigger">
-
+                        <button
+                            type="button"
+                            class="info-trigger"
+                        >
                             <span>
-                                Care
+                                Furniture Care
                             </span>
 
                             <span>+</span>
-
                         </button>
 
                         <div class="info-content">
 
                             <p>
-                                Follow the care instructions
-                                supplied with your product.
-                                Gentle washing and proper
-                                storage will help preserve
-                                the fabric and colour.
+                                Keep furniture away from
+                                prolonged direct sunlight
+                                and excess moisture where
+                                appropriate.
+
+                                Clean using products suitable
+                                for the specific upholstery,
+                                wood, leather, metal or other
+                                finish.
+
+                                Follow any product-specific
+                                care instructions supplied.
                             </p>
 
                         </div>
@@ -560,19 +696,17 @@
 
                 <h2>
                     Complete the
-                    <em>room.</em>
+                    <em>space.</em>
                 </h2>
 
             </div>
 
-
             <a href="shop.html">
-                View all products
+                View all furniture
                 <strong>↗</strong>
             </a>
 
         </div>
-
 
         <div
             class="related-grid"
@@ -583,7 +717,7 @@
 
 
     <!-- =====================================================
-         DELIVERY STRIP
+         SERVICE STRIP
     ====================================================== -->
 
     <section class="service-strip">
@@ -595,17 +729,17 @@
             <div>
 
                 <strong>
-                    Local delivery
+                    Delivery enquiries
                 </strong>
 
                 <p>
-                    Convenient delivery to your door.
+                    Ask about furniture delivery
+                    to your location.
                 </p>
 
             </div>
 
         </div>
-
 
         <div class="service-item">
 
@@ -614,17 +748,17 @@
             <div>
 
                 <strong>
-                    Carefully selected
+                    Furniture selection
                 </strong>
 
                 <p>
-                    Products chosen with quality in mind.
+                    Explore designs for different
+                    rooms and interiors.
                 </p>
 
             </div>
 
         </div>
-
 
         <div class="service-item">
 
@@ -633,17 +767,17 @@
             <div>
 
                 <strong>
-                    Easy ordering
+                    Easy browsing
                 </strong>
 
                 <p>
-                    Choose your favourite pieces online.
+                    Compare furniture styles,
+                    finishes and prices online.
                 </p>
 
             </div>
 
         </div>
-
 
         <div class="service-item">
 
@@ -652,11 +786,12 @@
             <div>
 
                 <strong>
-                    Personal service
+                    Personal assistance
                 </strong>
 
                 <p>
-                    We're here whenever you need us.
+                    Contact us for help with
+                    your furniture selection.
                 </p>
 
             </div>
@@ -672,26 +807,35 @@
      IMAGE LIGHTBOX
 ===================================================== -->
 
-<div class="lightbox">
+<div
+    class="lightbox"
+    role="dialog"
+    aria-modal="true"
+    aria-label="Expanded product image"
+>
 
-    <button class="close-lightbox">
+    <button
+        type="button"
+        class="close-lightbox"
+        aria-label="Close expanded image"
+    >
         ×
     </button>
 
     <img
         id="lightboxImage"
         src=""
-        alt=""
+        alt="Expanded furniture product image"
     >
 
 </div>
 
 
 <!-- =====================================================
-     TOAST
+     TOAST NOTIFICATION
 ===================================================== -->
 
-<div class="toast">
+<div class="toast" role="status" aria-live="polite">
 
     <span>✓</span>
 
@@ -702,7 +846,54 @@
 </div>
 
 
-<script src="product.js"></script>
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script src="shop.js"></script>
+<script src="products.js"></script>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+    const CART_KEY = "appleFurnitureCart";
+
+    function updateCartCount() {
+        let cart = [];
+
+        try {
+            cart = JSON.parse(
+                localStorage.getItem(CART_KEY) || "[]"
+            );
+        } catch {
+            cart = [];
+        }
+
+        const total = Array.isArray(cart)
+            ? cart.reduce(
+                (sum, item) =>
+                    sum + (Number(item.quantity) || 0),
+                0
+            )
+            : 0;
+
+        document.querySelectorAll(".cart-count")
+            .forEach(element => {
+                element.textContent = total;
+            });
+    }
+
+    updateCartCount();
+
+    window.addEventListener("storage", event => {
+        if (event.key === CART_KEY) {
+            updateCartCount();
+        }
+    });
+
+});
+</script>
 
 </body>
 </html>

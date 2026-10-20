@@ -1,19 +1,26 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+
     <meta
         name="viewport"
         content="width=device-width, initial-scale=1.0"
     >
 
-    <title>Your Cart | Mirembe Beddings & Curtains</title>
+    <title>Your Cart | Apple Furniture Uganda</title>
+
+    <meta
+        name="description"
+        content="Review your Apple Furniture Uganda shopping cart, update furniture quantities and proceed to checkout."
+    >
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link
-        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap"
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
         rel="stylesheet"
     >
 
@@ -21,6 +28,50 @@
         rel="stylesheet"
         href="cart.css"
     >
+
+    <style>
+        /* APPLE FURNITURE TYPOGRAPHY */
+
+        em {
+            font-style: normal !important;
+        }
+
+        /* Improve cart accessibility */
+
+        button {
+            cursor: pointer;
+        }
+
+        button:focus-visible,
+        a:focus-visible {
+            outline: 2px solid #9b7956;
+            outline-offset: 4px;
+        }
+
+        /* Furniture delivery information */
+
+        .furniture-cart-note {
+            margin-top: 20px;
+            padding: 18px 20px;
+            background: #f5f0e9;
+            border-left: 2px solid #9b7956;
+        }
+
+        .furniture-cart-note strong {
+            display: block;
+            margin-bottom: 7px;
+            color: #40352b;
+            font-size: 12px;
+            letter-spacing: 1px;
+        }
+
+        .furniture-cart-note p {
+            margin: 0;
+            color: #776c61;
+            font-size: 13px;
+            line-height: 1.7;
+        }
+    </style>
 </head>
 
 <body>
@@ -34,23 +85,22 @@
     <a href="index.html" class="brand">
 
         <span class="brand-mark">
-            M
+            A
         </span>
 
         <span class="brand-copy">
 
             <strong>
-                MIREMBE
+                APPLE FURNITURE
             </strong>
 
             <small>
-                BEDDINGS & CURTAINS
+                FURNITURE & INTERIORS
             </small>
 
         </span>
 
     </a>
-
 
     <nav class="desktop-nav">
 
@@ -62,20 +112,19 @@
             Shop
         </a>
 
-        <a href="index.html#collections">
+        <a href="collections.html">
             Collections
         </a>
 
-        <a href="index.html#about">
+        <a href="about.html">
             Our Story
         </a>
 
-        <a href="index.html#contact">
+        <a href="contact.html">
             Contact
         </a>
 
     </nav>
-
 
     <div class="header-actions">
 
@@ -86,7 +135,12 @@
             Continue shopping
         </a>
 
-        <button class="menu-button">
+        <button
+            type="button"
+            class="menu-button"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+        >
 
             <span></span>
             <span></span>
@@ -110,12 +164,15 @@
             MENU
         </span>
 
-        <button class="close-menu">
+        <button
+            type="button"
+            class="close-menu"
+            aria-label="Close navigation menu"
+        >
             ×
         </button>
 
     </div>
-
 
     <nav>
 
@@ -129,17 +186,17 @@
             Shop
         </a>
 
-        <a href="index.html#collections">
+        <a href="collections.html">
             <small>03</small>
             Collections
         </a>
 
-        <a href="index.html#about">
+        <a href="about.html">
             <small>04</small>
             Our Story
         </a>
 
-        <a href="index.html#contact">
+        <a href="contact.html">
             <small>05</small>
             Contact
         </a>
@@ -155,15 +212,16 @@
 
 <main class="cart-page">
 
-
-    <!-- INTRO -->
+    <!-- =============================================
+         INTRO
+    ============================================== -->
 
     <section class="cart-intro">
 
         <div>
 
             <span class="eyebrow">
-                YOUR SELECTION
+                YOUR FURNITURE SELECTION
             </span>
 
             <h1>
@@ -172,7 +230,6 @@
             </h1>
 
         </div>
-
 
         <div class="cart-counter">
 
@@ -199,7 +256,7 @@
     >
 
         <div class="empty-symbol">
-            M
+            A
         </div>
 
         <span>
@@ -212,16 +269,20 @@
         </h2>
 
         <p>
-            Discover something beautiful
-            for your bedroom or windows.
+            Discover beautiful furniture for your
+            living room, bedroom, dining space
+            or home office.
         </p>
 
         <a
             href="shop.html"
             class="shop-button"
         >
-            EXPLORE THE COLLECTION
+
+            EXPLORE FURNITURE
+
             <strong>↗</strong>
+
         </a>
 
     </section>
@@ -236,8 +297,9 @@
         id="cartContent"
     >
 
-
-        <!-- PRODUCTS -->
+        <!-- =============================================
+             CART PRODUCTS
+        ============================================== -->
 
         <div class="cart-products">
 
@@ -257,23 +319,21 @@
 
             </div>
 
+            <!-- PRODUCTS RENDERED BY cart.js -->
 
             <div
                 id="cartItems"
                 class="cart-items"
             ></div>
 
-
             <div class="cart-footer">
 
                 <a href="shop.html">
-
                     ← Continue shopping
-
                 </a>
 
-
                 <button
+                    type="button"
                     id="clearCart"
                 >
                     Clear cart
@@ -285,7 +345,7 @@
 
 
         <!-- =================================================
-             SUMMARY
+             ORDER SUMMARY
         ================================================== -->
 
         <aside class="cart-summary">
@@ -302,7 +362,6 @@
 
             </div>
 
-
             <div class="summary-lines">
 
                 <div>
@@ -317,7 +376,6 @@
 
                 </div>
 
-
                 <div>
 
                     <span>
@@ -325,13 +383,12 @@
                     </span>
 
                     <strong>
-                        Calculated at checkout
+                        To be confirmed
                     </strong>
 
                 </div>
 
             </div>
-
 
             <div class="summary-total">
 
@@ -345,8 +402,8 @@
 
             </div>
 
-
             <button
+                type="button"
                 class="checkout-button"
                 id="checkoutButton"
             >
@@ -361,7 +418,6 @@
 
             </button>
 
-
             <div class="secure-note">
 
                 <span>
@@ -369,8 +425,25 @@
                 </span>
 
                 <p>
-                    Your order details are
-                    securely prepared for checkout.
+                    Review your furniture order before
+                    proceeding to checkout.
+                </p>
+
+            </div>
+
+            <!-- FURNITURE DELIVERY NOTE -->
+
+            <div class="furniture-cart-note">
+
+                <strong>
+                    ABOUT FURNITURE DELIVERY
+                </strong>
+
+                <p>
+                    Delivery costs depend on your location,
+                    furniture size and access requirements.
+                    The final delivery fee will be confirmed
+                    before your order is finalized.
                 </p>
 
             </div>
@@ -381,7 +454,7 @@
 
 
     <!-- =================================================
-         TRUST
+         WHY SHOP WITH APPLE FURNITURE
     ================================================== -->
 
     <section class="cart-trust">
@@ -393,15 +466,15 @@
             </span>
 
             <strong>
-                Doorstep delivery
+                Delivery assistance
             </strong>
 
             <p>
-                We bring your order to you.
+                Contact our team to discuss furniture
+                delivery arrangements.
             </p>
 
         </div>
-
 
         <div>
 
@@ -410,15 +483,15 @@
             </span>
 
             <strong>
-                Carefully packed
+                Furniture for every space
             </strong>
 
             <p>
-                Your pieces are prepared with care.
+                Explore living room, bedroom,
+                dining and office collections.
             </p>
 
         </div>
-
 
         <div>
 
@@ -427,11 +500,12 @@
             </span>
 
             <strong>
-                Personal service
+                Personal assistance
             </strong>
 
             <p>
-                Need help? We're here.
+                Need help choosing the right piece?
+                We're here to answer your questions.
             </p>
 
         </div>
@@ -442,28 +516,34 @@
 
 
 <!-- =====================================================
-     REMOVE MODAL
+     REMOVE ITEM MODAL
 ===================================================== -->
 
 <div
     class="confirm-modal"
     id="confirmModal"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="removeModalHeading"
+    aria-hidden="true"
 >
 
     <div class="confirm-card">
 
         <button
+            type="button"
             class="modal-close"
             id="modalClose"
+            aria-label="Close remove item confirmation"
         >
             ×
         </button>
 
         <span>
-            REMOVE ITEM
+            REMOVE FURNITURE
         </span>
 
-        <h2>
+        <h2 id="removeModalHeading">
             Remove this
             <em>piece?</em>
         </h2>
@@ -476,12 +556,14 @@
         <div class="modal-actions">
 
             <button
+                type="button"
                 id="cancelRemove"
             >
                 KEEP IT
             </button>
 
             <button
+                type="button"
                 id="confirmRemove"
             >
                 REMOVE
@@ -493,6 +575,10 @@
 
 </div>
 
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
 
 <script src="cart.js"></script>
 

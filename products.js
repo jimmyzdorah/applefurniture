@@ -1,1512 +1,1578 @@
-/* =====================================================
-   MIREMBE PRODUCT ENGINE
-===================================================== */
-
 
 /* =====================================================
-   PRODUCT DATA
+   APPLE FURNITURE UGANDA
+   PRODUCT DETAILS ENGINE — CORRECTED VERSION
+
+   Works with:
+   - product.html
+   - shop.js / window.SHOP_PRODUCTS
+   - product.css
+   - appleFurnitureCart
+   - appleFurnitureWishlist
+
+   IMPORTANT:
+   Load shop.js BEFORE products.js in product.html.
 ===================================================== */
 
-const products = [
-
-    {
-        id: 1,
-
-        name: "Signature Comfort Set",
-
-        category: "beddings",
-
-        price: 180000,
-
-        oldPrice: null,
-
-        colors: ["cream", "grey", "brown"],
-
-        sizes: ["5x6", "6x6"],
-
-        stock: 12,
-
-        featured: true,
-
-        newest: true,
-
-        description:
-            "Beautifully made for everyday comfort, with a soft finish that makes your bedroom feel instantly more inviting.",
-
-        badge: "NEW",
-
-        images: [
-
-            "https://images.unsplash.com/photo-1584100936595-c0654b55a2e2?auto=format&fit=crop&w=1600&q=90",
-
-            "https://images.unsplash.com/photo-1618220179428-22790b461013?auto=format&fit=crop&w=1600&q=90",
-
-            "https://images.unsplash.com/photo-1615874694520-474822394e73?auto=format&fit=crop&w=1600&q=90",
-
-            "https://images.unsplash.com/photo-1617104678098-de229db51175?auto=format&fit=crop&w=1600&q=90"
-
-        ]
-
-    },
-
-
-    {
-        id: 2,
-
-        name: "Mirembe Luxe Collection",
-
-        category: "beddings",
-
-        price: 220000,
-
-        oldPrice: null,
-
-        colors: ["charcoal", "cream"],
-
-        sizes: ["5x6", "6x6"],
-
-        stock: 8,
-
-        featured: true,
-
-        newest: false,
-
-        description:
-            "A refined bedding collection designed for calm, luxurious bedrooms and effortless everyday living.",
-
-        badge: "FEATURED",
-
-        images: [
-
-            "https://images.unsplash.com/photo-1618220179428-22790b461013?auto=format&fit=crop&w=1600&q=90",
-
-            "https://images.unsplash.com/photo-1584100936595-c0654b55a2e2?auto=format&fit=crop&w=1600&q=90",
-
-            "https://images.unsplash.com/photo-1615874694520-474822394e73?auto=format&fit=crop&w=1600&q=90"
-
-        ]
-
-    },
-
-
-    {
-        id: 3,
-
-        name: "Soft Drapery Collection",
-
-        category: "curtains",
-
-        price: 150000,
-
-        oldPrice: 180000,
-
-        colors: ["cream", "brown", "grey"],
-
-        sizes: ["Standard", "Large"],
-
-        stock: 5,
-
-        featured: true,
-
-        newest: true,
-
-        description:
-            "Elegant curtains with a soft drape designed to bring warmth, privacy and understated character into your space.",
-
-        badge: "SALE",
-
-        images: [
-
-            "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1600&q=90",
-
-            "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1600&q=90",
-
-            "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1600&q=90"
-
-        ]
-
-    },
-
-
-    {
-        id: 4,
-
-        name: "Everyday Luxury Set",
-
-        category: "beddings",
-
-        price: 195000,
-
-        oldPrice: null,
-
-        colors: ["rose", "cream"],
-
-        sizes: ["5x6"],
-
-        stock: 4,
-
-        featured: false,
-
-        newest: true,
-
-        description:
-            "A soft, elegant bedding set that adds warmth and a subtle touch of luxury to everyday bedrooms.",
-
-        badge: "NEW",
-
-        images: [
-
-            "https://images.unsplash.com/photo-1615874694520-474822394e73?auto=format&fit=crop&w=1600&q=90",
-
-            "https://images.unsplash.com/photo-1584100936595-c0654b55a2e2?auto=format&fit=crop&w=1600&q=90"
-
-        ]
-
-    },
-
-
-    {
-        id: 5,
-
-        name: "Classic Linen Curtains",
-
-        category: "curtains",
-
-        price: 120000,
-
-        oldPrice: null,
-
-        colors: ["cream", "brown"],
-
-        sizes: ["Standard", "Large"],
-
-        stock: 15,
-
-        featured: true,
-
-        newest: false,
-
-        description:
-            "Classic curtains with a relaxed linen-inspired finish that works beautifully across modern and timeless interiors.",
-
-        badge: "BESTSELLER",
-
-        images: [
-
-            "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1600&q=90",
-
-            "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1600&q=90"
-
-        ]
-
-    },
-
-
-    {
-        id: 6,
-
-        name: "Royal Comfort Bedding",
-
-        category: "beddings",
-
-        price: 260000,
-
-        oldPrice: null,
-
-        colors: ["charcoal", "grey"],
-
-        sizes: ["6x6"],
-
-        stock: 0,
-
-        featured: false,
-
-        newest: false,
-
-        description:
-            "A rich, sophisticated bedding option for customers looking to create a deeper, more luxurious bedroom aesthetic.",
-
-        badge: "SOLD OUT",
-
-        images: [
-
-            "https://images.unsplash.com/photo-1617104678098-de229db51175?auto=format&fit=crop&w=1600&q=90",
-
-            "https://images.unsplash.com/photo-1618220179428-22790b461013?auto=format&fit=crop&w=1600&q=90"
-
-        ]
-
-    },
-
-
-    {
-        id: 7,
-
-        name: "Warm Earth Curtain Set",
-
-        category: "curtains",
-
-        price: 165000,
-
-        oldPrice: null,
-
-        colors: ["brown", "rose"],
-
-        sizes: ["Standard"],
-
-        stock: 9,
-
-        featured: false,
-
-        newest: true,
-
-        description:
-            "Warm earthy tones and a graceful fall make this curtain set ideal for cosy, welcoming interiors.",
-
-        badge: "NEW",
-
-        images: [
-
-            "https://images.unsplash.com/photo-1615874694520-474822394e73?auto=format&fit=crop&w=1600&q=90",
-
-            "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1600&q=90"
-
-        ]
-
-    },
-
-
-    {
-        id: 8,
-
-        name: "Soft Touch Duvet Set",
-
-        category: "beddings",
-
-        price: 145000,
-
-        oldPrice: null,
-
-        colors: ["cream", "rose"],
-
-        sizes: ["5x6", "6x6"],
-
-        stock: 18,
-
-        featured: true,
-
-        newest: false,
-
-        description:
-            "Soft-touch bedding designed for comfort, simplicity and an effortlessly polished bedroom.",
-
-        badge: null,
-
-        images: [
-
-            "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1600&q=90",
-
-            "https://images.unsplash.com/photo-1584100936595-c0654b55a2e2?auto=format&fit=crop&w=1600&q=90"
-
-        ]
-
+document.addEventListener("DOMContentLoaded", () => {
+
+    "use strict";
+
+    /* =================================================
+       CONFIGURATION
+    ================================================= */
+
+    const CART_KEY = "appleFurnitureCart";
+    const WISHLIST_KEY = "appleFurnitureWishlist";
+
+    const $ = selector => document.querySelector(selector);
+    const $$ = selector => [...document.querySelectorAll(selector)];
+
+    const formatPrice = value =>
+        "UGX " + Number(value || 0).toLocaleString("en-US");
+
+    const titleCase = value =>
+        String(value || "")
+            .replace(/[-_]/g, " ")
+            .replace(/\b\w/g, letter => letter.toUpperCase());
+
+    const colorMap = {
+        cream: "#ded3c2",
+        ivory: "#f1eadf",
+        white: "#f5f3ef",
+        grey: "#999892",
+        gray: "#999892",
+        charcoal: "#30302d",
+        black: "#222222",
+        brown: "#725845",
+        walnut: "#73513b",
+        beige: "#c9b79d",
+        tan: "#b78e6b",
+        green: "#65765d",
+        blue: "#526b80",
+        gold: "#b49361"
+    };
+
+    const categoryNames =
+        window.SHOP_CATEGORY_NAMES || {
+            sofas: "Sofas & Seating",
+            beds: "Beds & Bedroom",
+            dining: "Dining Furniture",
+            office: "Office Furniture",
+            storage: "Wardrobes & Storage",
+            chairs: "Chairs & Stools"
+        };
+
+    /* =================================================
+       SAFE LOCAL STORAGE
+    ================================================= */
+
+    function readStorage(key) {
+
+        try {
+            const result = JSON.parse(
+                localStorage.getItem(key) || "[]"
+            );
+
+            return Array.isArray(result) ? result : [];
+
+        } catch (error) {
+
+            console.warn("Storage read error:", error);
+            return [];
+
+        }
     }
 
-];
+    function saveStorage(key, value) {
 
+        try {
 
-/* =====================================================
-   URL
-===================================================== */
+            localStorage.setItem(
+                key,
+                JSON.stringify(value)
+            );
 
-const params =
-    new URLSearchParams(
+            return true;
+
+        } catch (error) {
+
+            console.error("Storage save error:", error);
+            return false;
+
+        }
+    }
+
+    /* =================================================
+       NORMALIZE PRODUCT IMAGES
+
+       Supports:
+       - image: "https://..."
+       - images: ["https://...", "..."]
+
+       Preserves original image URLs from shop.js.
+    ================================================= */
+
+    function normalizeImages(item) {
+
+        const candidates = [];
+
+        if (Array.isArray(item.images)) {
+            candidates.push(...item.images);
+        }
+
+        if (typeof item.image === "string") {
+            candidates.push(item.image);
+        }
+
+        const validImages = candidates
+            .filter(url =>
+                typeof url === "string" &&
+                url.trim() !== ""
+            )
+            .map(url => url.trim());
+
+        return [...new Set(validImages)];
+    }
+
+    /* =================================================
+       NORMALIZE PRODUCT CATALOGUE
+    ================================================= */
+
+    const sourceProducts =
+        Array.isArray(window.SHOP_PRODUCTS)
+            ? window.SHOP_PRODUCTS
+            : [];
+
+    const products = sourceProducts.map(item => {
+
+        const images = normalizeImages(item);
+
+        const colors = Array.isArray(item.colors)
+            ? item.colors.filter(Boolean)
+            : item.color
+                ? [item.color]
+                : [];
+
+        const sizes = Array.isArray(item.sizes)
+            ? item.sizes.filter(Boolean)
+            : [];
+
+        const hasStockNumber =
+            item.stock !== undefined &&
+            item.stock !== null &&
+            item.stock !== "";
+
+        const stock = hasStockNumber
+            ? Math.max(0, Number(item.stock) || 0)
+            : null;
+
+        const available =
+            item.available !== false &&
+            (stock === null || stock > 0);
+
+        return {
+
+            ...item,
+
+            id: String(item.id || ""),
+
+            name: String(
+                item.name || "Furniture Product"
+            ),
+
+            category: String(
+                item.category || "furniture"
+            ),
+
+            price: Number(item.price) || 0,
+
+            oldPrice:
+                item.oldPrice !== undefined &&
+                item.oldPrice !== null
+                    ? Number(item.oldPrice)
+                    : null,
+
+            image: images[0] || "",
+
+            images,
+
+            colors,
+
+            sizes,
+
+            stock,
+
+            available,
+
+            description:
+                item.description ||
+                "Discover furniture selected to bring comfort, beauty and character into your living space.",
+
+            badge:
+                item.badge ||
+                (item.newest ? "new" : "")
+
+        };
+
+    });
+
+    /* =================================================
+       FIND PRODUCT FROM URL
+    ================================================= */
+
+    const params = new URLSearchParams(
         window.location.search
     );
 
-const productId =
-    Number(params.get("id")) || 1;
+    const requestedId = params.get("id");
 
-
-/* =====================================================
-   CURRENT PRODUCT
-===================================================== */
-
-const product =
-    products.find(
-        item => item.id === productId
-    ) || products[0];
-
-
-/* =====================================================
-   STATE
-===================================================== */
-
-let selectedColor =
-    product.colors[0];
-
-let selectedSize =
-    product.sizes[0];
-
-let quantity = 1;
-
-let currentImage = 0;
-
-
-/* =====================================================
-   ELEMENTS
-===================================================== */
-
-const mainImage =
-    document.getElementById(
-        "mainProductImage"
+    const product = products.find(item =>
+        item.id.toLowerCase() ===
+        String(requestedId || "").toLowerCase()
     );
 
-const thumbnails =
-    document.getElementById(
-        "galleryThumbnails"
-    );
+    /* =================================================
+       PAGE ELEMENTS
+    ================================================= */
 
-const productName =
-    document.getElementById(
-        "productName"
-    );
+    const mainImage = $("#mainProductImage");
+    const thumbnails = $("#galleryThumbnails");
 
-const productCategory =
-    document.getElementById(
-        "productCategory"
-    );
+    const productName = $("#productName");
+    const productCategory = $("#productCategory");
+    const productPrice = $("#productPrice");
+    const productDescription = $("#productDescription");
+    const productBadge = $("#productBadge");
 
-const productPrice =
-    document.getElementById(
-        "productPrice"
-    );
+    const stockText = $("#stockText");
+    const stockStatus =
+        $("#stockStatus") || $(".stock-status");
 
-const productDescription =
-    document.getElementById(
-        "productDescription"
-    );
+    const colorSection = $("#colorSection");
+    const colorOptions = $("#colorOptions");
+    const selectedColorText = $("#selectedColor");
 
-const productBadge =
-    document.getElementById(
-        "productBadge"
-    );
+    const sizeSection = $("#sizeSection");
+    const sizeOptions = $("#sizeOptions");
+    const selectedSizeText = $("#selectedSize");
 
-const stockText =
-    document.getElementById(
-        "stockText"
-    );
+    const quantityText = $("#quantity");
 
-const stockStatus =
-    document.querySelector(
-        ".stock-status"
-    );
+    const addCartButton = $("#addCart");
+    const buyNowButton = $("#buyNow");
+    const wishlistButton = $("#wishlist");
 
-const colorOptions =
-    document.getElementById(
-        "colorOptions"
-    );
+    const relatedContainer = $("#relatedProducts");
 
-const sizeOptions =
-    document.getElementById(
-        "sizeOptions"
-    );
+    const toast = $(".toast");
 
-const selectedColorText =
-    document.getElementById(
-        "selectedColor"
-    );
+    /* =================================================
+       PAGE STATE
+    ================================================= */
 
-const selectedSizeText =
-    document.getElementById(
-        "selectedSize"
-    );
+    let selectedColor = product?.colors[0] || "";
+    let selectedSize = product?.sizes[0] || "";
 
-const quantityText =
-    document.getElementById(
-        "quantity"
-    );
+    let quantity = 1;
+    let currentImage = 0;
 
-const cartCount =
-    document.querySelector(
-        ".cart-count"
-    );
+    let toastTimer;
 
-const toast =
-    document.querySelector(".toast");
+    /* =================================================
+       CART COUNTER
+    ================================================= */
 
+    function updateCartCount() {
 
-/* =====================================================
-   PRICE
-===================================================== */
+        const cart = readStorage(CART_KEY);
 
-function formatPrice(price) {
-
-    return (
-        "UGX " +
-        price.toLocaleString("en-UG")
-    );
-
-}
-
-
-/* =====================================================
-   CAPITALIZE
-===================================================== */
-
-function titleCase(text) {
-
-    return text
-        .replace(/-/g, " ")
-        .replace(/\b\w/g, char =>
-            char.toUpperCase()
-        );
-
-}
-
-
-/* =====================================================
-   LOAD PRODUCT
-===================================================== */
-
-function loadProduct() {
-
-    productName.textContent =
-        product.name;
-
-    productCategory.textContent =
-        product.category.toUpperCase();
-
-    productDescription.textContent =
-        product.description;
-
-    document.title =
-        `${product.name} | Mirembe`;
-
-    document.getElementById(
-        "breadcrumbName"
-    ).textContent =
-        product.name;
-
-
-    /* PRICE */
-
-    if (product.oldPrice) {
-
-        productPrice.innerHTML = `
-
-            <span class="old-price">
-                ${formatPrice(product.oldPrice)}
-            </span>
-
-            ${formatPrice(product.price)}
-
-        `;
-
-    } else {
-
-        productPrice.textContent =
-            formatPrice(product.price);
-
-    }
-
-
-    /* BADGE */
-
-    if (product.badge) {
-
-        productBadge.textContent =
-            product.badge;
-
-    } else {
-
-        productBadge.classList.add(
-            "hidden"
-        );
-
-    }
-
-
-    /* STOCK */
-
-    if (product.stock <= 0) {
-
-        stockText.textContent =
-            "Currently unavailable";
-
-        stockStatus.classList.add(
-            "sold"
-        );
-
-    } else {
-
-        stockText.textContent =
-            product.stock <= 3
-            ? `Only ${product.stock} left`
-            : "In stock";
-
-    }
-
-
-    renderGallery();
-
-    renderColors();
-
-    renderSizes();
-
-    renderRelated();
-
-}
-
-
-/* =====================================================
-   GALLERY
-===================================================== */
-
-function renderGallery() {
-
-    mainImage.src =
-        product.images[0];
-
-    mainImage.alt =
-        product.name;
-
-
-    thumbnails.innerHTML = "";
-
-
-    product.images.forEach(
-        (image, index) => {
-
-            const thumbnail =
-                document.createElement("button");
-
-            thumbnail.className =
-                "thumbnail";
-
-            if (index === 0) {
-
-                thumbnail.classList.add(
-                    "active"
-                );
-
-            }
-
-
-            thumbnail.innerHTML = `
-
-                <img
-                    src="${image}"
-                    alt="${product.name}"
-                >
-
-            `;
-
-
-            thumbnail.addEventListener(
-                "click",
-                () => {
-
-                    changeImage(index);
-
-                }
-            );
-
-
-            thumbnails.appendChild(
-                thumbnail
-            );
-
-        }
-    );
-
-}
-
-
-function changeImage(index) {
-
-    if (
-        index < 0 ||
-        index >= product.images.length
-    ) return;
-
-
-    currentImage = index;
-
-
-    const gallery =
-        document.querySelector(
-            ".gallery-main"
-        );
-
-    gallery.classList.add(
-        "changing"
-    );
-
-
-    setTimeout(() => {
-
-        mainImage.src =
-            product.images[index];
-
-        gallery.classList.remove(
-            "changing"
-        );
-
-    }, 180);
-
-
-    document
-        .querySelectorAll(".thumbnail")
-        .forEach(
-            (thumbnail, thumbnailIndex) => {
-
-                thumbnail.classList.toggle(
-                    "active",
-                    thumbnailIndex === index
-                );
-
-            }
-        );
-
-}
-
-
-/* =====================================================
-   GALLERY BUTTONS
-===================================================== */
-
-document
-    .querySelector(".gallery-prev")
-    .addEventListener(
-        "click",
-        () => {
-
-            const nextIndex =
-                currentImage === 0
-                ? product.images.length - 1
-                : currentImage - 1;
-
-            changeImage(nextIndex);
-
-        }
-    );
-
-
-document
-    .querySelector(".gallery-next")
-    .addEventListener(
-        "click",
-        () => {
-
-            const nextIndex =
-                currentImage ===
-                product.images.length - 1
-                ? 0
-                : currentImage + 1;
-
-            changeImage(nextIndex);
-
-        }
-    );
-
-
-/* =====================================================
-   COLORS
-===================================================== */
-
-const colorMap = {
-
-    cream: "#ded3c2",
-
-    grey: "#999892",
-
-    charcoal: "#30302d",
-
-    rose: "#b98d89",
-
-    brown: "#725845"
-
-};
-
-
-function renderColors() {
-
-    colorOptions.innerHTML = "";
-
-
-    product.colors.forEach(
-        color => {
-
-            const button =
-                document.createElement("button");
-
-            button.className =
-                "color-choice";
-
-
-            if (color === selectedColor) {
-
-                button.classList.add(
-                    "active"
-                );
-
-            }
-
-
-            button.style.background =
-                colorMap[color] ||
-                "#ccc";
-
-
-            button.title =
-                titleCase(color);
-
-
-            button.addEventListener(
-                "click",
-                () => {
-
-                    selectedColor =
-                        color;
-
-                    selectedColorText.textContent =
-                        titleCase(color);
-
-                    renderColors();
-
-                }
-            );
-
-
-            colorOptions.appendChild(
-                button
-            );
-
-        }
-    );
-
-
-    selectedColorText.textContent =
-        titleCase(selectedColor);
-
-}
-
-
-/* =====================================================
-   SIZES
-===================================================== */
-
-function renderSizes() {
-
-    sizeOptions.innerHTML = "";
-
-
-    product.sizes.forEach(
-        size => {
-
-            const button =
-                document.createElement("button");
-
-            button.className =
-                "size-choice";
-
-
-            if (size === selectedSize) {
-
-                button.classList.add(
-                    "active"
-                );
-
-            }
-
-
-            button.textContent =
-                size;
-
-
-            button.addEventListener(
-                "click",
-                () => {
-
-                    selectedSize =
-                        size;
-
-                    selectedSizeText.textContent =
-                        size;
-
-                    renderSizes();
-
-                }
-            );
-
-
-            sizeOptions.appendChild(
-                button
-            );
-
-        }
-    );
-
-
-    selectedSizeText.textContent =
-        selectedSize;
-
-}
-
-
-/* =====================================================
-   QUANTITY
-===================================================== */
-
-document
-    .getElementById("increaseQuantity")
-    .addEventListener(
-        "click",
-        () => {
-
-            if (
-                quantity <
-                product.stock
-            ) {
-
-                quantity++;
-
-                quantityText.textContent =
-                    quantity;
-
-            }
-
-        }
-    );
-
-
-document
-    .getElementById("decreaseQuantity")
-    .addEventListener(
-        "click",
-        () => {
-
-            if (quantity > 1) {
-
-                quantity--;
-
-                quantityText.textContent =
-                    quantity;
-
-            }
-
-        }
-    );
-
-
-/* =====================================================
-   CART
-===================================================== */
-
-let cart =
-    JSON.parse(
-        localStorage.getItem(
-            "mirembeCart"
-        )
-    ) || [];
-
-
-function updateCartCount() {
-
-    const total =
-        cart.reduce(
+        const total = cart.reduce(
             (sum, item) =>
-                sum + item.quantity,
+                sum + (Number(item.quantity) || 0),
             0
         );
 
-    cartCount.textContent =
-        total;
-
-}
-
-
-function addProductToCart() {
-
-    if (product.stock <= 0) {
-
-        showToast(
-            "This product is currently unavailable."
-        );
-
-        return false;
+        $$(".cart-count").forEach(element => {
+            element.textContent = total;
+        });
 
     }
 
+    /* =================================================
+       TOAST NOTIFICATION
+    ================================================= */
 
-    const cartItem =
-        cart.find(
-            item =>
-                item.id === product.id &&
-                item.color === selectedColor &&
-                item.size === selectedSize
+    function showToast(message) {
+
+        if (!toast) {
+            console.log(message);
+            return;
+        }
+
+        const text = toast.querySelector("p");
+
+        if (text) {
+            text.textContent = message;
+        }
+
+        toast.classList.add("show");
+
+        clearTimeout(toastTimer);
+
+        toastTimer = setTimeout(() => {
+            toast.classList.remove("show");
+        }, 2800);
+
+    }
+
+    /* =================================================
+       PRODUCT NOT FOUND
+    ================================================= */
+
+    function showProductNotFound() {
+
+        document.title =
+            "Product Not Found | Apple Furniture Uganda";
+
+        if (productName) {
+            productName.textContent =
+                "Product not found";
+        }
+
+        if (productCategory) {
+            productCategory.textContent =
+                "APPLE FURNITURE";
+        }
+
+        if (productDescription) {
+
+            productDescription.textContent =
+                products.length
+                    ? "This furniture item could not be found. Please return to our shop to browse available products."
+                    : "The furniture catalogue could not be loaded. Make sure shop.js is included before products.js.";
+
+        }
+
+        if (productPrice) {
+            productPrice.textContent = "";
+        }
+
+        if (mainImage) {
+            mainImage.removeAttribute("src");
+            mainImage.style.display = "none";
+        }
+
+        if (thumbnails) {
+            thumbnails.innerHTML = "";
+        }
+
+        if (productBadge) {
+            productBadge.hidden = true;
+            productBadge.style.display = "none";
+        }
+
+        if (stockText) {
+            stockText.textContent = "Unavailable";
+        }
+
+        if (colorSection) {
+            colorSection.hidden = true;
+            colorSection.style.display = "none";
+        }
+
+        if (sizeSection) {
+            sizeSection.hidden = true;
+            sizeSection.style.display = "none";
+        }
+
+        if (addCartButton) {
+            addCartButton.disabled = true;
+        }
+
+        if (buyNowButton) {
+            buyNowButton.disabled = true;
+        }
+
+        if (wishlistButton) {
+            wishlistButton.disabled = true;
+        }
+
+        $$(".gallery-arrow, .image-expand")
+            .forEach(button => {
+                button.disabled = true;
+                button.style.display = "none";
+            });
+
+        if (relatedContainer) {
+
+            relatedContainer.innerHTML = "";
+
+            const link = document.createElement("a");
+
+            link.href = "shop.html";
+
+            link.textContent =
+                "Return to the furniture shop ↗";
+
+            relatedContainer.appendChild(link);
+
+        }
+
+    }
+
+    /* =================================================
+       LOAD PRODUCT DETAILS
+    ================================================= */
+
+    function loadProduct() {
+
+        if (!product) {
+            showProductNotFound();
+            return;
+        }
+
+        document.title =
+            `${product.name} | Apple Furniture Uganda`;
+
+        if (productName) {
+            productName.textContent = product.name;
+        }
+
+        if (productCategory) {
+
+            productCategory.textContent =
+                (
+                    categoryNames[product.category] ||
+                    titleCase(product.category)
+                ).toUpperCase();
+
+        }
+
+        if (productDescription) {
+            productDescription.textContent =
+                product.description;
+        }
+
+        const breadcrumbName = $("#breadcrumbName");
+
+        if (breadcrumbName) {
+            breadcrumbName.textContent = product.name;
+        }
+
+        const reference = $("#productReference");
+
+        if (reference) {
+            reference.textContent =
+                `PRODUCT REF: ${product.id}`;
+        }
+
+        /* PRICE */
+
+        if (productPrice) {
+
+            productPrice.innerHTML = "";
+
+            if (
+                product.oldPrice &&
+                product.oldPrice > product.price
+            ) {
+
+                const oldPrice =
+                    document.createElement("span");
+
+                oldPrice.className = "old-price";
+
+                oldPrice.textContent =
+                    formatPrice(product.oldPrice);
+
+                productPrice.appendChild(oldPrice);
+
+                productPrice.appendChild(
+                    document.createTextNode(
+                        " " + formatPrice(product.price)
+                    )
+                );
+
+            } else {
+
+                productPrice.textContent =
+                    formatPrice(product.price);
+
+            }
+
+        }
+
+        /* BADGE */
+
+        if (productBadge) {
+
+            if (product.badge) {
+
+                productBadge.textContent =
+                    String(product.badge).toUpperCase();
+
+                productBadge.hidden = false;
+                productBadge.style.display = "";
+
+            } else {
+
+                productBadge.hidden = true;
+                productBadge.style.display = "none";
+
+            }
+
+        }
+
+        /* STOCK */
+
+        stockStatus?.classList.remove(
+            "sold",
+            "out-of-stock",
+            "in-stock"
         );
 
+        if (!product.available) {
 
-    if (cartItem) {
+            if (stockText) {
+                stockText.textContent =
+                    "Currently unavailable";
+            }
 
-        cartItem.quantity += quantity;
+            stockStatus?.classList.add(
+                "sold",
+                "out-of-stock"
+            );
 
-    } else {
+            if (addCartButton) {
+                addCartButton.disabled = true;
+            }
 
-        cart.push({
+            if (buyNowButton) {
+                buyNowButton.disabled = true;
+            }
 
-            id: product.id,
+        } else {
 
-            name: product.name,
+            if (stockText) {
 
-            price: product.price,
+                stockText.textContent =
+                    product.stock !== null &&
+                    product.stock <= 3
+                        ? `Only ${product.stock} available`
+                        : "Available";
 
-            image: product.images[0],
+            }
 
-            color: selectedColor,
+            stockStatus?.classList.add("in-stock");
 
-            size: selectedSize,
+            if (addCartButton) {
+                addCartButton.disabled = false;
+            }
 
-            quantity: quantity
+            if (buyNowButton) {
+                buyNowButton.disabled = false;
+            }
+
+        }
+
+        renderGallery();
+        renderColors();
+        renderSizes();
+        renderRelated();
+        updateWishlistButton();
+
+    }
+
+    /* =================================================
+       IMAGE GALLERY — CORRECTED
+
+       Uses the SAME image URLs as shop.js.
+    ================================================= */
+
+    function renderGallery() {
+
+        if (!mainImage || !thumbnails || !product) {
+            return;
+        }
+
+        thumbnails.innerHTML = "";
+
+        currentImage = 0;
+
+        if (!product.images.length) {
+
+            mainImage.removeAttribute("src");
+
+            mainImage.alt =
+                "Product image unavailable";
+
+            $$(".gallery-arrow, .image-expand")
+                .forEach(button => {
+                    button.style.display = "none";
+                });
+
+            thumbnails.style.display = "none";
+
+            console.warn(
+                "No image URL found for product:",
+                product.id
+            );
+
+            return;
+        }
+
+        mainImage.style.display = "";
+
+        mainImage.src = product.images[0];
+
+        mainImage.alt = product.name;
+
+        mainImage.loading = "eager";
+
+        mainImage.decoding = "async";
+
+        mainImage.onerror = function () {
+
+            console.error(
+                "Failed to load product image:",
+                this.src
+            );
+
+        };
+
+        thumbnails.style.display =
+            product.images.length > 1
+                ? ""
+                : "none";
+
+        $$(".gallery-arrow").forEach(button => {
+
+            button.style.display =
+                product.images.length > 1
+                    ? ""
+                    : "none";
+
+        });
+
+        $(".image-expand")?.style.setProperty(
+            "display",
+            ""
+        );
+
+        product.images.forEach((imageURL, index) => {
+
+            const button =
+                document.createElement("button");
+
+            button.type = "button";
+
+            button.className = "thumbnail";
+
+            button.setAttribute(
+                "aria-label",
+                `View image ${index + 1} of ${product.name}`
+            );
+
+            if (index === currentImage) {
+                button.classList.add("active");
+            }
+
+            const image =
+                document.createElement("img");
+
+            image.src = imageURL;
+
+            image.alt =
+                `${product.name} - image ${index + 1}`;
+
+            image.loading = "lazy";
+
+            button.appendChild(image);
+
+            button.addEventListener("click", () => {
+                changeImage(index);
+            });
+
+            thumbnails.appendChild(button);
+
+        });
+
+        console.log(
+            "Product image loaded:",
+            product.id,
+            product.images[0]
+        );
+
+    }
+
+    function changeImage(index) {
+
+        if (
+            !product ||
+            !product.images.length ||
+            !mainImage
+        ) {
+            return;
+        }
+
+        const length = product.images.length;
+
+        currentImage =
+            (index + length) % length;
+
+        const gallery = $(".gallery-main");
+
+        gallery?.classList.add("changing");
+
+        mainImage.src =
+            product.images[currentImage];
+
+        $$(".thumbnail").forEach((button, i) => {
+
+            button.classList.toggle(
+                "active",
+                i === currentImage
+            );
+
+        });
+
+        requestAnimationFrame(() => {
+
+            gallery?.classList.remove("changing");
 
         });
 
     }
 
-
-    localStorage.setItem(
-        "mirembeCart",
-        JSON.stringify(cart)
-    );
-
-
-    updateCartCount();
-
-
-    showToast(
-        `${product.name} added to your cart`
-    );
-
-
-    return true;
-
-}
-
-
-/* =====================================================
-   ADD TO CART
-===================================================== */
-
-document
-    .getElementById("addCart")
-    .addEventListener(
+    $(".gallery-prev")?.addEventListener(
         "click",
         () => {
-
-            addProductToCart();
-
+            changeImage(currentImage - 1);
         }
     );
 
-
-/* =====================================================
-   BUY NOW
-===================================================== */
-
-document
-    .getElementById("buyNow")
-    .addEventListener(
+    $(".gallery-next")?.addEventListener(
         "click",
         () => {
-
-            const added =
-                addProductToCart();
-
-            if (added) {
-
-                setTimeout(() => {
-
-                    window.location.href =
-                        "cart.html";
-
-                }, 400);
-
-            }
-
+            changeImage(currentImage + 1);
         }
     );
 
+    /* =================================================
+       COLOUR OPTIONS
+    ================================================= */
 
-/* =====================================================
-   WISHLIST
-===================================================== */
+    function renderColors() {
 
-document
-    .getElementById("wishlist")
-    .addEventListener(
-        "click",
-        event => {
+        if (
+            !product ||
+            !colorOptions ||
+            !colorSection
+        ) {
+            return;
+        }
 
-            event.currentTarget.classList.toggle(
-                "active"
+        colorOptions.innerHTML = "";
+
+        if (!product.colors.length) {
+
+            colorSection.hidden = true;
+            colorSection.style.display = "none";
+
+            return;
+        }
+
+        colorSection.hidden = false;
+        colorSection.style.display = "";
+
+        product.colors.forEach(color => {
+
+            const button =
+                document.createElement("button");
+
+            button.type = "button";
+
+            button.className = "color-choice";
+
+            button.title = titleCase(color);
+
+            button.setAttribute(
+                "aria-label",
+                `Select ${titleCase(color)} finish`
             );
 
+            button.setAttribute(
+                "aria-pressed",
+                String(color === selectedColor)
+            );
 
-            event.currentTarget.textContent =
-                event.currentTarget.classList.contains(
-                    "active"
-                )
-                ? "♥"
-                : "♡";
+            button.style.background =
+                colorMap[String(color).toLowerCase()] ||
+                "#b7aaa0";
+
+            if (color === selectedColor) {
+                button.classList.add("active");
+            }
+
+            button.addEventListener("click", () => {
+
+                selectedColor = color;
+
+                renderColors();
+
+            });
+
+            colorOptions.appendChild(button);
+
+        });
+
+        if (selectedColorText) {
+
+            selectedColorText.textContent =
+                titleCase(selectedColor);
+
+        }
+
+    }
+
+    /* =================================================
+       SIZE / CONFIGURATION OPTIONS
+    ================================================= */
+
+    function renderSizes() {
+
+        if (
+            !product ||
+            !sizeOptions ||
+            !sizeSection
+        ) {
+            return;
+        }
+
+        sizeOptions.innerHTML = "";
+
+        if (!product.sizes.length) {
+
+            sizeSection.hidden = true;
+            sizeSection.style.display = "none";
+
+            return;
+        }
+
+        sizeSection.hidden = false;
+        sizeSection.style.display = "";
+
+        product.sizes.forEach(size => {
+
+            const button =
+                document.createElement("button");
+
+            button.type = "button";
+
+            button.className = "size-choice";
+
+            button.textContent = size;
+
+            button.setAttribute(
+                "aria-pressed",
+                String(size === selectedSize)
+            );
+
+            if (size === selectedSize) {
+                button.classList.add("active");
+            }
+
+            button.addEventListener("click", () => {
+
+                selectedSize = size;
+
+                renderSizes();
+
+            });
+
+            sizeOptions.appendChild(button);
+
+        });
+
+        if (selectedSizeText) {
+            selectedSizeText.textContent =
+                selectedSize;
+        }
+
+    }
+
+    /* =================================================
+       QUANTITY
+    ================================================= */
+
+    function updateQuantity() {
+
+        if (quantityText) {
+            quantityText.textContent = quantity;
+        }
+
+        const decrease = $("#decreaseQuantity");
+        const increase = $("#increaseQuantity");
+
+        if (decrease) {
+            decrease.disabled = quantity <= 1;
+        }
+
+        if (increase) {
+
+            increase.disabled =
+                !product?.available ||
+                (
+                    product.stock !== null &&
+                    quantity >= product.stock
+                );
+
+        }
+
+    }
+
+    $("#increaseQuantity")?.addEventListener(
+        "click",
+        () => {
+
+            if (!product?.available) return;
+
+            if (
+                product.stock !== null &&
+                quantity >= product.stock
+            ) {
+                return;
+            }
+
+            quantity++;
+
+            updateQuantity();
 
         }
     );
 
+    $("#decreaseQuantity")?.addEventListener(
+        "click",
+        () => {
 
-/* =====================================================
-   RELATED PRODUCTS
-===================================================== */
+            if (quantity <= 1) return;
 
-function renderRelated() {
+            quantity--;
 
-    const container =
-        document.getElementById(
-            "relatedProducts"
+            updateQuantity();
+
+        }
+    );
+
+    /* =================================================
+       ADD PRODUCT TO CART
+    ================================================= */
+
+    function addProductToCart() {
+
+        if (!product || !product.available) {
+
+            showToast(
+                "This furniture item is currently unavailable."
+            );
+
+            return false;
+        }
+
+        const cart = readStorage(CART_KEY);
+
+        const existing = cart.find(item =>
+
+            String(item.id) === product.id &&
+
+            String(item.color || "") === selectedColor &&
+
+            String(item.size || "") === selectedSize
+
         );
 
+        const existingQuantity =
+            Number(existing?.quantity) || 0;
 
-    const related =
-        products
-            .filter(
-                item =>
-                    item.id !== product.id &&
-                    item.category === product.category
-            )
-            .slice(0,4);
+        if (
+            product.stock !== null &&
+            existingQuantity + quantity > product.stock
+        ) {
 
+            showToast(
+                `Only ${product.stock} available for this item.`
+            );
 
-    container.innerHTML = "";
+            return false;
+        }
 
+        if (existing) {
 
-    related.forEach(
-        item => {
+            existing.quantity =
+                existingQuantity + quantity;
+
+        } else {
+
+            const cartItem = {
+
+                id: product.id,
+
+                name: product.name,
+
+                category: product.category,
+
+                price: product.price,
+
+                image: product.images[0] || product.image,
+
+                quantity: quantity
+
+            };
+
+            if (selectedColor) {
+                cartItem.color = selectedColor;
+            }
+
+            if (selectedSize) {
+                cartItem.size = selectedSize;
+            }
+
+            cart.push(cartItem);
+
+        }
+
+        if (!saveStorage(CART_KEY, cart)) {
+
+            showToast(
+                "Unable to save your cart. Please try again."
+            );
+
+            return false;
+        }
+
+        updateCartCount();
+
+        showToast(
+            `${product.name} added to your cart`
+        );
+
+        return true;
+
+    }
+
+    addCartButton?.addEventListener("click", () => {
+        addProductToCart();
+    });
+
+    /* =================================================
+       BUY NOW
+    ================================================= */
+
+    buyNowButton?.addEventListener("click", () => {
+
+        if (addProductToCart()) {
+            window.location.href = "checkout.html";
+        }
+
+    });
+
+    /* =================================================
+       WISHLIST
+    ================================================= */
+
+    function updateWishlistButton() {
+
+        if (!product || !wishlistButton) return;
+
+        const wishlist = readStorage(WISHLIST_KEY);
+
+        const isSaved = wishlist.includes(product.id);
+
+        wishlistButton.classList.toggle(
+            "active",
+            isSaved
+        );
+
+        wishlistButton.textContent =
+            isSaved ? "♥" : "♡";
+
+        wishlistButton.setAttribute(
+            "aria-label",
+            isSaved
+                ? "Remove from wishlist"
+                : "Add to wishlist"
+        );
+
+    }
+
+    wishlistButton?.addEventListener("click", () => {
+
+        if (!product) return;
+
+        const wishlist = readStorage(WISHLIST_KEY);
+
+        const index = wishlist.indexOf(product.id);
+
+        if (index >= 0) {
+            wishlist.splice(index, 1);
+        } else {
+            wishlist.push(product.id);
+        }
+
+        if (saveStorage(WISHLIST_KEY, wishlist)) {
+
+            updateWishlistButton();
+
+            showToast(
+                index >= 0
+                    ? "Removed from wishlist"
+                    : "Added to wishlist"
+            );
+
+        }
+
+    });
+
+    /* =================================================
+       RELATED PRODUCTS
+    ================================================= */
+
+    function renderRelated() {
+
+        if (!product || !relatedContainer) return;
+
+        let related = products.filter(item =>
+
+            item.id !== product.id &&
+
+            item.category === product.category
+
+        );
+
+        if (related.length < 4) {
+
+            const others = products.filter(item =>
+
+                item.id !== product.id &&
+
+                item.category !== product.category
+
+            );
+
+            related = [
+                ...related,
+                ...others
+            ];
+
+        }
+
+        related = related.slice(0, 4);
+
+        relatedContainer.innerHTML = "";
+
+        related.forEach(item => {
 
             const card =
                 document.createElement("a");
 
             card.href =
-                `product.html?id=${item.id}`;
+                `product.html?id=${encodeURIComponent(item.id)}`;
 
-            card.className =
-                "related-card";
+            card.className = "related-card";
 
+            const imageWrap =
+                document.createElement("div");
 
-            card.innerHTML = `
+            imageWrap.className = "related-image";
 
-                <div class="related-image">
+            const image =
+                document.createElement("img");
 
-                    <img
-                        src="${item.images[0]}"
-                        alt="${item.name}"
-                        loading="lazy"
-                    >
+            image.src =
+                item.images[0] || item.image || "";
 
-                </div>
+            image.alt = item.name;
 
+            image.loading = "lazy";
 
-                <div class="related-info">
+            imageWrap.appendChild(image);
 
-                    <div>
+            const info =
+                document.createElement("div");
 
-                        <small>
-                            ${item.category.toUpperCase()}
-                        </small>
+            info.className = "related-info";
 
-                        <h3>
-                            ${item.name}
-                        </h3>
+            const textWrap =
+                document.createElement("div");
 
-                    </div>
+            const category =
+                document.createElement("small");
 
+            category.textContent =
+                (
+                    categoryNames[item.category] ||
+                    titleCase(item.category)
+                ).toUpperCase();
 
-                    <span class="related-price">
-                        ${formatPrice(item.price)}
-                    </span>
+            const name =
+                document.createElement("h3");
 
-                </div>
+            name.textContent = item.name;
 
-            `;
+            textWrap.appendChild(category);
+            textWrap.appendChild(name);
 
+            const price =
+                document.createElement("span");
 
-            container.appendChild(
-                card
-            );
+            price.className = "related-price";
 
-        }
-    );
+            price.textContent =
+                formatPrice(item.price);
 
-}
+            info.appendChild(textWrap);
+            info.appendChild(price);
 
+            card.appendChild(imageWrap);
+            card.appendChild(info);
 
-/* =====================================================
-   ACCORDIONS
-===================================================== */
+            relatedContainer.appendChild(card);
 
-document
-    .querySelectorAll(".info-trigger")
-    .forEach(button => {
+        });
 
-        button.addEventListener(
-            "click",
-            () => {
+    }
 
-                const item =
-                    button.closest(
-                        ".info-item"
-                    );
+    /* =================================================
+       PRODUCT INFORMATION ACCORDIONS
+    ================================================= */
 
+    $$(".info-trigger").forEach(button => {
 
-                const alreadyOpen =
-                    item.classList.contains(
-                        "open"
-                    );
+        button.setAttribute(
+            "aria-expanded",
+            "false"
+        );
 
+        button.addEventListener("click", () => {
 
-                document
-                    .querySelectorAll(
-                        ".info-item"
-                    )
-                    .forEach(
-                        other =>
-                            other.classList.remove(
-                                "open"
-                            )
-                    );
+            const item =
+                button.closest(".info-item");
 
+            if (!item) return;
 
-                if (!alreadyOpen) {
+            const alreadyOpen =
+                item.classList.contains("open");
 
-                    item.classList.add(
-                        "open"
-                    );
+            $$(".info-item").forEach(other => {
 
-                }
+                other.classList.remove("open");
+
+                const trigger =
+                    other.querySelector(".info-trigger");
+
+                trigger?.setAttribute(
+                    "aria-expanded",
+                    "false"
+                );
+
+            });
+
+            if (!alreadyOpen) {
+
+                item.classList.add("open");
+
+                button.setAttribute(
+                    "aria-expanded",
+                    "true"
+                );
 
             }
-        );
+
+        });
 
     });
 
+    /* =================================================
+       IMAGE LIGHTBOX
+    ================================================= */
 
-/* =====================================================
-   LIGHTBOX
-===================================================== */
+    const lightbox = $(".lightbox");
+    const lightboxImage = $("#lightboxImage");
 
-const lightbox =
-    document.querySelector(
-        ".lightbox"
-    );
+    function closeLightbox() {
 
-const lightboxImage =
-    document.getElementById(
-        "lightboxImage"
-    );
+        lightbox?.classList.remove("open");
 
+        document.body.classList.remove("locked");
 
-document
-    .querySelector(".image-expand")
-    .addEventListener(
+    }
+
+    $(".image-expand")?.addEventListener(
         "click",
         () => {
 
+            if (
+                !product ||
+                !product.images.length ||
+                !lightbox ||
+                !lightboxImage
+            ) {
+                return;
+            }
+
             lightboxImage.src =
-                mainImage.src;
+                product.images[currentImage];
 
-            lightbox.classList.add(
-                "open"
-            );
+            lightboxImage.alt = product.name;
 
-            document.body.classList.add(
-                "locked"
-            );
+            lightbox.classList.add("open");
+
+            document.body.classList.add("locked");
 
         }
     );
 
-
-document
-    .querySelector(".close-lightbox")
-    .addEventListener(
+    $(".close-lightbox")?.addEventListener(
         "click",
         closeLightbox
     );
 
+    lightbox?.addEventListener("click", event => {
 
-lightbox.addEventListener(
-    "click",
-    event => {
-
-        if (
-            event.target === lightbox
-        ) {
-
+        if (event.target === lightbox) {
             closeLightbox();
-
         }
 
-    }
-);
+    });
 
+    /* =================================================
+       SEARCH OVERLAY
+    ================================================= */
 
-function closeLightbox() {
+    const searchOverlay = $(".search-overlay");
+    const searchInput = $("#searchInput");
 
-    lightbox.classList.remove(
-        "open"
-    );
+    function closeSearch() {
 
-    document.body.classList.remove(
-        "locked"
-    );
-
-}
-
-
-/* =====================================================
-   SEARCH
-===================================================== */
-
-const searchOverlay =
-    document.querySelector(
-        ".search-overlay"
-    );
-
-const searchButton =
-    document.querySelector(
-        ".search-button"
-    );
-
-const closeSearch =
-    document.querySelector(
-        ".close-search"
-    );
-
-const searchInput =
-    document.getElementById(
-        "searchInput"
-    );
-
-
-searchButton.addEventListener(
-    "click",
-    () => {
-
-        searchOverlay.classList.add(
-            "open"
-        );
-
-        setTimeout(
-            () =>
-                searchInput.focus(),
-            300
+        searchOverlay?.classList.remove(
+            "open",
+            "active"
         );
 
     }
-);
 
+    $(".search-button")?.addEventListener(
+        "click",
+        () => {
 
-closeSearch.addEventListener(
-    "click",
-    () => {
-
-        searchOverlay.classList.remove(
-            "open"
-        );
-
-    }
-);
-
-
-searchInput.addEventListener(
-    "keydown",
-    event => {
-
-        if (
-            event.key === "Enter" &&
-            searchInput.value.trim()
-        ) {
-
-            window.location.href =
-                `shop.html?search=${encodeURIComponent(
-                    searchInput.value.trim()
-                )}`;
-
-        }
-
-        if (
-            event.key === "Escape"
-        ) {
-
-            searchOverlay.classList.remove(
-                "open"
+            searchOverlay?.classList.add(
+                "open",
+                "active"
             );
 
+            setTimeout(() => {
+                searchInput?.focus();
+            }, 150);
+
         }
-
-    }
-);
-
-
-/* =====================================================
-   MOBILE MENU
-===================================================== */
-
-const menuButton =
-    document.querySelector(
-        ".menu-button"
     );
 
-const mobileNav =
-    document.querySelector(
-        ".mobile-nav"
+    $(".close-search")?.addEventListener(
+        "click",
+        closeSearch
     );
 
-const closeMenu =
-    document.querySelector(
-        ".close-menu"
-    );
-
-
-menuButton.addEventListener(
-    "click",
-    () => {
-
-        mobileNav.classList.add(
-            "open"
-        );
-
-        document.body.classList.add(
-            "locked"
-        );
-
-    }
-);
-
-
-closeMenu.addEventListener(
-    "click",
-    () => {
-
-        mobileNav.classList.remove(
-            "open"
-        );
-
-        document.body.classList.remove(
-            "locked"
-        );
-
-    }
-);
-
-
-/* =====================================================
-   TOAST
-===================================================== */
-
-let toastTimer;
-
-
-function showToast(message) {
-
-    toast.querySelector("p").textContent =
-        message;
-
-    toast.classList.add(
-        "show"
-    );
-
-
-    clearTimeout(
-        toastTimer
-    );
-
-
-    toastTimer =
-        setTimeout(
-            () => {
-
-                toast.classList.remove(
-                    "show"
-                );
-
-            },
-            2800
-        );
-
-}
-
-
-/* =====================================================
-   KEYBOARD GALLERY
-===================================================== */
-
-document.addEventListener(
-    "keydown",
-    event => {
-
-        if (
-            lightbox.classList.contains(
-                "open"
-            )
-        ) {
+    searchInput?.addEventListener(
+        "keydown",
+        event => {
 
             if (
-                event.key === "Escape"
+                event.key === "Enter" &&
+                searchInput.value.trim()
             ) {
 
-                closeLightbox();
+                window.location.href =
+                    "shop.html?search=" +
+                    encodeURIComponent(
+                        searchInput.value.trim()
+                    );
 
             }
 
-            return;
-
         }
+    );
 
+    /* =================================================
+       MOBILE NAVIGATION
+    ================================================= */
 
-        if (
-            event.key === "ArrowLeft"
-        ) {
+    const menuButton = $(".menu-button");
+    const mobileNav = $(".mobile-nav");
 
-            document
-                .querySelector(
-                    ".gallery-prev"
-                )
-                .click();
+    function closeMobileMenu() {
 
-        }
+        mobileNav?.classList.remove(
+            "open",
+            "active"
+        );
 
+        document.body.classList.remove("locked");
 
-        if (
-            event.key === "ArrowRight"
-        ) {
-
-            document
-                .querySelector(
-                    ".gallery-next"
-                )
-                .click();
-
-        }
+        menuButton?.setAttribute(
+            "aria-expanded",
+            "false"
+        );
 
     }
-);
 
+    menuButton?.addEventListener(
+        "click",
+        () => {
 
-/* =====================================================
-   INIT
-===================================================== */
+            mobileNav?.classList.add(
+                "open",
+                "active"
+            );
 
-loadProduct();
+            document.body.classList.add("locked");
 
-updateCartCount();
+            menuButton.setAttribute(
+                "aria-expanded",
+                "true"
+            );
+
+        }
+    );
+
+    $(".close-menu")?.addEventListener(
+        "click",
+        closeMobileMenu
+    );
+
+    $$(".mobile-nav a").forEach(link => {
+
+        link.addEventListener(
+            "click",
+            closeMobileMenu
+        );
+
+    });
+
+    /* =================================================
+       KEYBOARD SUPPORT
+    ================================================= */
+
+    document.addEventListener(
+        "keydown",
+        event => {
+
+            if (event.key === "Escape") {
+
+                if (
+                    lightbox?.classList.contains("open")
+                ) {
+                    closeLightbox();
+                    return;
+                }
+
+                if (
+                    searchOverlay?.classList.contains("open")
+                ) {
+                    closeSearch();
+                    return;
+                }
+
+                if (
+                    mobileNav?.classList.contains("open")
+                ) {
+                    closeMobileMenu();
+                    return;
+                }
+
+            }
+
+            const target = event.target;
+
+            if (
+                target instanceof HTMLElement &&
+                target.closest(
+                    "input, textarea, select, [contenteditable]"
+                )
+            ) {
+                return;
+            }
+
+            if (
+                !product ||
+                product.images.length < 2
+            ) {
+                return;
+            }
+
+            if (event.key === "ArrowLeft") {
+                changeImage(currentImage - 1);
+            }
+
+            if (event.key === "ArrowRight") {
+                changeImage(currentImage + 1);
+            }
+
+        }
+    );
+
+    /* =================================================
+       SYNC STORAGE BETWEEN TABS
+    ================================================= */
+
+    window.addEventListener("storage", event => {
+
+        if (event.key === CART_KEY) {
+            updateCartCount();
+        }
+
+        if (event.key === WISHLIST_KEY) {
+            updateWishlistButton();
+        }
+
+    });
+
+    /* =================================================
+       INITIALIZE
+    ================================================= */
+
+    updateCartCount();
+
+    loadProduct();
+
+    updateQuantity();
+
+    console.log(
+        "Apple Furniture product page initialized"
+    );
+
+    console.log(
+        "Catalogue products:",
+        products.length
+    );
+
+    console.log(
+        "Requested product:",
+        requestedId
+    );
+
+    console.log(
+        "Selected product:",
+        product || "Not found"
+    );
+
+    if (product) {
+
+        console.log(
+            "Product images:",
+            product.images
+        );
+
+    }
+
+});

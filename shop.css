@@ -1866,3 +1866,85 @@ img {
         bottom: 9px;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ============================================
+   APPLE FURNITURE
+   MOBILE ADD-TO-CART BUTTON FIX
+   ============================================ */
+
+@media (max-width: 768px) {
+
+    /* Keep the button positioned inside the image */
+    .product-card .product-image {
+        position: relative;
+    }
+
+    /* Small + button in the bottom-right corner */
+    .product-card .product-image .quick-add {
+        position: absolute !important;
+
+        top: auto !important;
+        left: auto !important;
+        right: 10px !important;
+        bottom: 10px !important;
+
+        width: 36px !important;
+        height: 36px !important;
+
+        min-width: 36px !important;
+        min-height: 36px !important;
+        max-width: 36px !important;
+        max-height: 36px !important;
+
+        padding: 0 !important;
+        margin: 0 !important;
+
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+
+        background: #ffffff;
+        color: #29241f;
+
+        border: none;
+        border-radius: 4px;
+
+        font-size: 23px;
+        font-weight: 400;
+        line-height: 1;
+
+        opacity: 1 !important;
+        visibility: visible !important;
+        transform: none !important;
+
+        z-index: 5;
+        cursor: pointer;
+    }
+
+    /* Touch feedback */
+    .product-card .product-image .quick-add:active {
+        background: #846747;
+        transform: scale(0.95) !important;
+    }
+
+    /* Unavailable products */
+    .product-card .product-image .quick-add:disabled {
+        opacity: 0.45 !important;
+        cursor: not-allowed;
+    }
+}
